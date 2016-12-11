@@ -1,0 +1,4 @@
+--require init
+--require helpers
+--recursive
+--timeout 60000

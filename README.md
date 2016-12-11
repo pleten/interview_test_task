@@ -1,8 +1,15 @@
-## Repository description:
+# Tests for ssls.com
 
-This repository is for uploading results of the completed test task.
+### Requirements:
+- Nodejs v.7.2
+- Java v.1.8
+- Selenium server 
+- ChromeDriver - latest
+- GoogleChrome - latest
 
-- You should create new project from a scratch. Project could be developed with any programming language and any framework you want.
-- Project should be in the new branch. 
-- Create new Pull Request when task will be finished.
-- Project should contain covered test cases that are described in task document and contain instructions how to build and run your project.
+
+### How to run tests:
+- Install npm modules with `npm install`
+- Run selenium server
+- Run ChromeDriver
+- Run tests with command: `./node_modules/mocha/bin/mocha`
