@@ -1,8 +1,8 @@
-## Repository description:
+## SSLS Test project:
 
-This repository is for uploading results of the completed test task.
+#### To build and run you need:
 
-- You should create new project from a scratch. Project could be developed with any programming language and any framework you want.
-- Project should be in the new branch. 
-- Create new Pull Request when task will be finished.
-- Project should contain covered test cases that are described in task document and contain instructions how to build and run your project.
+- Install dependecies and update webdriver: ``npm install``
+- Run all tests: ``npm test``
+- Or run specific suite: ``npm test -- --suite auth,profile ``
+- Test results are stored in ``test-result`` folder
