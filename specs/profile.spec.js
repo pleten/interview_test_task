@@ -19,13 +19,15 @@ describe('Profile page', function () {
     });
 
     it('should show client area with not empty fields', function () {
-        expect($('.profile-page')).toBeDisplayed();
-
         expect(profile.items.count()).toBe(7, 'Profile items');
 
-        profile.items.each(function (item) {
-            expect(item.$('.description').getText()).toBeNonEmptyString();
-        });
+        expect(profile.itemDesc('Name')).toHaveText('Vasya Pupkin');
+        expect(profile.itemDesc('Email')).toHaveText(browser.params.email);
+        expect(profile.itemDesc('Password')).toHaveText('*****');
+        expect(profile.itemDesc('Phone')).toHaveText('+380 57123456789');
+        expect(profile.itemDesc('Address')).toHaveText('Diagon alley 2, Misto, Uryupinsk 612120, Ukraine');
+        expect(profile.pinDesc.getText()).toBeSameLengthAs('aaaa');
+        expect(profile.itemDesc('Newsletter').element(by.name('newsletterOn'))).toBeChecked();
     });
 
     it('should update pin', function () {

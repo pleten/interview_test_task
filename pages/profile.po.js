@@ -24,6 +24,7 @@ ProfilePage.prototype = Object.create({}, {
     items: { get: function() { return $$('.profile-content .item'); }},
     pinButton: { get: function() { return $('[ng-click*=regeneratePin]'); }},
     pinDesc: { get: function() { return element(by.cssContainingText('.item', 'Support pin')).$('.description'); }},
+    itemDesc: { value: function(itemName) { return element(by.cssContainingText('.item', itemName)).$('.description'); }},
 });
 
 module.exports = ProfilePage;
