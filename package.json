@@ -1,0 +1,30 @@
+{
+  "name": "interview_test_task",
+  "version": "1.0.0",
+  "description": "protractor test for ssls",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "webdriver-manager update",
+    "test": "protractor protractor.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valburyakov/interview_test_task.git"
+  },
+  "author": "valentin.buryakov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valburyakov/interview_test_task/issues"
+  },
+  "homepage": "https://github.com/valburyakov/interview_test_task#readme",
+  "devDependencies": {
+    "@types/protractor-helpers": "^1.0.30",
+    "chance": "^1.0.4",
+    "jasmine-expect": "^3.6.0",
+    "jasmine-spec-reporter": "^3.2.0",
+    "protractor": "^5.1.1",
+    "protractor-helpers": "^1.1.0",
+    "protractor-jasmine2-html-reporter": "0.0.7",
+    "protractor-jasmine2-screenshot-reporter": "^0.3.3"
+  }
+}
