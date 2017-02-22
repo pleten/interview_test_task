@@ -8,11 +8,11 @@ using OpenQA.Selenium;
 
 namespace Ssl_web_tests
 {
-    public class LoginService: BaseClass
+    public class LoginService: BaseService
     {
         public Dictionary<string,string> locators = new Dictionary<string, string>();
 
-        public LoginService():base ()
+        public LoginService(ApplicationManager manager):base (manager)
         {
             locators.Add("login", "input[name = 'email']");
             locators.Add("password", "input[name = 'password']");
@@ -20,6 +20,7 @@ namespace Ssl_web_tests
             locators.Add("loginButton", ".log-box > a:nth-child(1)");
         }
 
+       
         public void FillLoginField(string login)
         {
             Driver.FindElement(By.CssSelector(locators["login"])).Clear();
@@ -36,5 +37,27 @@ namespace Ssl_web_tests
         {
             Driver.FindElement(By.CssSelector(locators["submitButton"])).Click();
         }
+
+        public void LoginAs(LoginData userCredentials)
+        {
+            FillLoginField(userCredentials.Email);
+            FillPasswordField(userCredentials.Password);
+            SubmitCredentialsToTheServer();
+        }
+
+        public string GetLoggedUserName()
+        {
+            return Driver.FindElement(By.CssSelector("a[href = '/user/certificates']")).Text;
+           
+        }
+
+        public bool IsLoggedIn(LoginData userCredentials)
+        {
+            if (GetLoggedUserName() == userCredentials.Email)
+            { return true; }
+            else
+            { return false; }
+        }
+
     }
 }

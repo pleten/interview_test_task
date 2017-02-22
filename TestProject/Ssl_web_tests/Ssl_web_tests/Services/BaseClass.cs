@@ -4,18 +4,20 @@ using OpenQA.Selenium.Support.UI;
 
 namespace Ssl_web_tests
 {
-    public class BaseClass
+    public class BaseService
     {
         public IWebDriver Driver { get; set; }
+        protected ApplicationManager manager;
 
-        public BaseClass()
+        public BaseService()
         {
             Driver = new FirefoxDriver();
         }
 
-        public BaseClass(IWebDriver driver)
+        public BaseService(ApplicationManager manager)
         {
-            this.Driver = driver;
+            this.manager = manager;
+            this.Driver = manager.Driver;
         }
 
         public bool IsElementPresent(By by)

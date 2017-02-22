@@ -7,33 +7,33 @@ using OpenQA.Selenium.Firefox;
 
 namespace Ssl_web_tests
 {
-    public class NavigationService: BaseClass
+    public class NavigationService: BaseService
     {
-        private string baseUrl;
+        public string BaseUrl { get; set; }
 
-        public NavigationService(): base()
+        public NavigationService(ApplicationManager manager, string baseUrl) : base(manager)
         {
-            baseUrl = "https://www.ssls.com";
+            this.BaseUrl = baseUrl;
         }
 
         public void GoToHomePage()
         {
-            if (Driver.Url == baseUrl)
+            if (Driver.Url == BaseUrl)
             {
                 return;
             }
 
-            Driver.Navigate().GoToUrl(baseUrl);
+            Driver.Navigate().GoToUrl(BaseUrl);
         }
 
         public void GoToAutorizationPage()
         {
-            Driver.Navigate().GoToUrl(baseUrl + "/authorize");
+            Driver.Navigate().GoToUrl(BaseUrl + "/authorize");
         }
 
         public void GoToUserProfilePage()
         {
-            Driver.Navigate().GoToUrl(baseUrl + "/user/profile");
+            Driver.Navigate().GoToUrl(BaseUrl + "/user/profile");
         }
     }
 }
