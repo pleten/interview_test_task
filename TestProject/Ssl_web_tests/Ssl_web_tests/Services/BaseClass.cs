@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
+using System;
 
 namespace Ssl_web_tests
 {
@@ -11,7 +12,12 @@ namespace Ssl_web_tests
 
         public BaseService()
         {
-            Driver = new FirefoxDriver();
+            FirefoxOptions firefoxOptions = new FirefoxOptions
+            {
+                UseLegacyImplementation = true
+            };
+
+            Driver = new FirefoxDriver(FirefoxDriverService.CreateDefaultService(), firefoxOptions, TimeSpan.FromSeconds(30));
         }
 
         public BaseService(ApplicationManager manager)

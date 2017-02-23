@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace Ssl_web_tests
 {
@@ -47,8 +48,9 @@ namespace Ssl_web_tests
 
         public string GetLoggedUserName()
         {
-            return Driver.FindElement(By.CssSelector("a[href = '/user/certificates']")).Text;
-           
+            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
+            return wait.Until(drv => drv.FindElement(By.CssSelector("a[href = '/user/certificates']"))).Text;
+                    
         }
 
         public bool IsLoggedIn(LoginData userCredentials)
@@ -58,6 +60,14 @@ namespace Ssl_web_tests
             else
             { return false; }
         }
+
+        public string NotificationMessageText()
+        {
+            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
+            return wait.Until(drv => drv.FindElement(By.CssSelector("span.noty_text"))).Text;
+           
+             //return Driver.FindElement(By.CssSelector("span.noty_text")).Text;
+         }
 
     }
 }

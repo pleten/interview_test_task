@@ -20,5 +20,19 @@ namespace Ssl_web_tests
             Assert.IsTrue(pageService.LoginService.IsLoggedIn(registeredUser));
         }
 
+        [Test]
+        public void ShouldntBeLoggedInAsNotRegisteredUser()
+        {
+            LoginData notRegisteredUser = new LoginData("email@address.com", "123456789");
+            pageService.Navigator.GoToAutorizationPage();
+            pageService.LoginService.LoginAs(notRegisteredUser);
+
+            string expectedMessageText = "Uh oh! Email or password is incorrect";
+            string expectedURL = pageService.BaseUrl + "/authorize";
+
+            Assert.AreEqual(expectedURL, pageService.Navigator.GetCurrentUrl());
+            Assert.AreEqual(expectedMessageText, pageService.LoginService.NotificationMessageText());
+        }
+
     }
 }

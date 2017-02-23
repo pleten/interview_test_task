@@ -73,6 +73,7 @@
     <Compile Include="Services\LoginService.cs" />
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Models\PersonalData.cs" />
+    <Compile Include="Services\TestResult.cs" />
     <Compile Include="Tests\LoginVerificationTests.cs" />
     <Compile Include="Tests\BasicTestClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

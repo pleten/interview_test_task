@@ -35,5 +35,10 @@ namespace Ssl_web_tests
         {
             Driver.Navigate().GoToUrl(BaseUrl + "/user/profile");
         }
+
+        public string GetCurrentUrl()
+        {
+            return Driver.Url;
+        }
     }
 }
