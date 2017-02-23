@@ -28,17 +28,21 @@ namespace Ssl_web_tests
 
         public void GoToAutorizationPage()
         {
+            if (Driver.Url == (BaseUrl + "/authorize"))
+            {
+                return;
+            }
             Driver.Navigate().GoToUrl(BaseUrl + "/authorize");
-        }
-
-        public void GoToUserProfilePage()
-        {
-            Driver.Navigate().GoToUrl(BaseUrl + "/user/profile");
         }
 
         public string GetCurrentUrl()
         {
             return Driver.Url;
+        }
+
+        public void GoToUserProfilePage()
+        {
+            Driver.Navigate().GoToUrl(BaseUrl + "/user/profile");
         }
     }
 }

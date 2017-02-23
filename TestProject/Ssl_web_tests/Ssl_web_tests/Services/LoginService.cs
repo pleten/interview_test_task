@@ -34,6 +34,13 @@ namespace Ssl_web_tests
             Driver.FindElement(By.CssSelector(locators["password"])).SendKeys(pass);
         }
 
+        public string InvalidEmailMessageText()
+        {
+           string messageText =  Driver.FindElement(By.CssSelector("div[ng-show='authForm.email.$dirty && (authForm.email.$error.email || authForm.email.$error.pattern)']"))
+                                    .FindElement(By.CssSelector("span.tooltip-text")).Text;
+            return messageText.Replace("br", " ").Replace("\r\n", " ").Trim();
+        }
+
         public void SubmitCredentialsToTheServer()
         {
             Driver.FindElement(By.CssSelector(locators["submitButton"])).Click();
