@@ -17,9 +17,10 @@ namespace Ssl_web_tests
 
         public LoginService LoginService { get; set; }
         public NavigationService Navigator { get; set; }
+        public UserProfileNavigationService ProfileNavigator { get; set; }
+        public PersonalProfileService PersonalDataService { get; set; }
 
-
-        private static ThreadLocal<ApplicationManager> pageSerive = new ThreadLocal<ApplicationManager>();
+        private static ThreadLocal<ApplicationManager> pageService = new ThreadLocal<ApplicationManager>();
 
         
 
@@ -28,7 +29,9 @@ namespace Ssl_web_tests
             Driver = new FirefoxDriver();
             BaseUrl = "https://www.ssls.com";
             LoginService = new LoginService(this);
-            Navigator = new NavigationService(this, BaseUrl);
+            Navigator = new NavigationService(this);
+            ProfileNavigator = new UserProfileNavigationService(this);
+            PersonalDataService = new PersonalProfileService(this);
         }
 
         ~ApplicationManager()
@@ -46,13 +49,13 @@ namespace Ssl_web_tests
 
         public static ApplicationManager GetInstance()
         {
-            if (!pageSerive.IsValueCreated)
+            if (!pageService.IsValueCreated)
             {
                 ApplicationManager newInstance = new ApplicationManager();
                 newInstance.Navigator.GoToHomePage();
-                pageSerive.Value = newInstance;
+                pageService.Value = newInstance;
             }
-            return pageSerive.Value;
+            return pageService.Value;
         }
 
     }

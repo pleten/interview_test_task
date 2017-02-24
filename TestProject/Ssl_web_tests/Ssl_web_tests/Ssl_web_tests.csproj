@@ -77,12 +77,15 @@
     <Compile Include="Services\LoginService.cs" />
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Models\PersonalData.cs" />
+    <Compile Include="Services\PersonalProfileService.cs" />
     <Compile Include="Services\UserProfileNavigationService.cs" />
     <Compile Include="Tests\LoginVerificationTests.cs" />
     <Compile Include="Tests\BasicTestClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\UserProfileTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="credentials.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

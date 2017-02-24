@@ -9,30 +9,31 @@ namespace Ssl_web_tests
 {
     public class NavigationService: BaseService
     {
-        public string BaseUrl { get; set; }
-
-        public NavigationService(ApplicationManager manager, string baseUrl) : base(manager)
-        {
-            this.BaseUrl = baseUrl;
-        }
+        public NavigationService(ApplicationManager manager) : base(manager)
+        { }
 
         public void GoToHomePage()
         {
-            if (Driver.Url == BaseUrl)
+            if (Driver.Url == manager.BaseUrl)
             {
                 return;
             }
 
-            Driver.Navigate().GoToUrl(BaseUrl);
+            Driver.Navigate().GoToUrl(manager.BaseUrl);
         }
 
         public void GoToAutorizationPage()
         {
-            if (Driver.Url == (BaseUrl + "/authorize"))
+            if (Driver.Url == (manager.BaseUrl + "/authorize"))
             {
                 return;
             }
-            Driver.Navigate().GoToUrl(BaseUrl + "/authorize");
+            Driver.Navigate().GoToUrl(manager.BaseUrl + "/authorize");
+            if (Driver.Url != (manager.BaseUrl + "/authorize"))
+            {
+                manager.LoginService.Logout();
+                Driver.Navigate().GoToUrl(manager.BaseUrl + "/authorize");
+            }
         }
 
         public string GetCurrentUrl()
@@ -40,9 +41,6 @@ namespace Ssl_web_tests
             return Driver.Url;
         }
 
-        public void GoToUserProfilePage()
-        {
-            Driver.Navigate().GoToUrl(BaseUrl + "/user/profile");
-        }
+       
     }
 }

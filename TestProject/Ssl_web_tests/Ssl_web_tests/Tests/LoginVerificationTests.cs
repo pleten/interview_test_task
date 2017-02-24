@@ -13,6 +13,10 @@ namespace Ssl_web_tests
     [TestFixture]
     public class LoginVerificationTests: BasicTestClass
     {
+        LoginData registeredUser = new LoginData("ssls.automation+4@gmail.com", "123456");
+        LoginData notRegisteredUser = new LoginData("email@address.com", "123456789");
+        
+
         public static IEnumerable<LoginData> LoginCredentialsFromJsonFile()
         {
             string assemblyPath = NUnit.Framework.Internal.AssemblyHelper.GetAssemblyPath(typeof(LoginVerificationTests).Assembly);
@@ -34,17 +38,15 @@ namespace Ssl_web_tests
 
         [Test]
         public void ShouldSuccessfullyLoginAsRegisteredUser()
-        {
-            LoginData registeredUser = new LoginData("ssls.automation+4@gmail.com", "123456");
+        {            
             pageService.Navigator.GoToAutorizationPage();
             pageService.LoginService.LoginAs(registeredUser);
             Assert.IsTrue(pageService.LoginService.IsLoggedIn(registeredUser));
         }
 
         [Test]
-        public void ShouldntBeLoggedInAsNotRegisteredUser()
+        public void ShouldNotBeLoggedInAsNotRegisteredUser()
         {
-            LoginData notRegisteredUser = new LoginData("email@address.com", "123456789");
             pageService.Navigator.GoToAutorizationPage();
             pageService.LoginService.LoginAs(notRegisteredUser);
 
@@ -54,7 +56,47 @@ namespace Ssl_web_tests
             Assert.AreEqual(expectedURL, pageService.Navigator.GetCurrentUrl());
             Assert.AreEqual(expectedMessageText, pageService.LoginService.NotificationMessageText());
         }
-        //[Test]
-        //public void 
+
+        [Test]
+        public void EmptyEmailFiledWarningMessageDisplaying()
+        {
+            LoginData credentialsWithEmptyEmail = new LoginData("", "1");
+
+            pageService.Navigator.GoToAutorizationPage();
+            pageService.LoginService.LoginAs(credentialsWithEmptyEmail);
+
+            string expectedMessageText = "Oops, please enter your email";
+
+            Assert.AreEqual(expectedMessageText, pageService.LoginService.EmptyEmailFieldMessageText());
+        }
+
+        [Test]
+        public void EmptyPasswordFiledWarningMessageDisplaying()
+        {
+            LoginData credentialsWithEmptyPassword = new LoginData("test@email.cc", "");
+
+            pageService.Navigator.GoToAutorizationPage();
+            pageService.LoginService.LoginAs(credentialsWithEmptyPassword);
+
+            string expectedMessageText = "Looks like you’ve missed this one";
+
+            Assert.AreEqual(expectedMessageText, pageService.LoginService.EmptyPasswordFieldMessageText());
+        }
+
+        [Test]
+        public void ShouldBeLoggedOut()
+        {
+            //pre-condition
+            pageService.Navigator.GoToAutorizationPage();
+            pageService.LoginService.LoginAs(registeredUser);
+
+            //action
+            pageService.LoginService.Logout();
+
+            //Assert
+            string expectedURL = (pageService.BaseUrl + "/authorize");
+
+            Assert.AreEqual(expectedURL, pageService.Navigator.GetCurrentUrl());
+        }
     }
 }

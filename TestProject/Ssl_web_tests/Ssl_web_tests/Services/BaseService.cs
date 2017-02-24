@@ -39,5 +39,13 @@ namespace Ssl_web_tests
             }
         }
 
+        public void WaitUntilPageIsLoaded(int timeout)
+        {
+            var now = DateTime.Now;
+            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(timeout));
+            wait.PollingInterval = TimeSpan.FromSeconds(timeout);
+            wait.Until(wd => (DateTime.Now - now) - TimeSpan.FromSeconds(timeout) > TimeSpan.Zero);
+        }
+
     }
 }
