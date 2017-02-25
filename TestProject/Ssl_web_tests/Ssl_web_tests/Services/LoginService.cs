@@ -20,6 +20,7 @@ namespace Ssl_web_tests
             locators.Add("submitButton", ".primary");
             locators.Add("loginButton", ".log-box > a:nth-child(1)");
             locators.Add("logoutButton", "button[ng-click='logout()']");
+            locators.Add("showPasswordButton", "button.btn-input-block");
         }
 
        
@@ -97,12 +98,29 @@ namespace Ssl_web_tests
             WaitUntilPageIsLoaded(5);
         }
         
-
         public void InitLogout()
         {
             Driver.FindElement(By.CssSelector(locators["logoutButton"])).Click();
         }
 
+        public void ShowPassword()
+        {
+            if (Driver.FindElement(By.CssSelector(locators["password"])).GetAttribute("type") == "password")
+            {
+                InitPasswordViewChanging();
+            }            
+        }
 
+        public void InitPasswordViewChanging()
+        {            
+            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
+            IWebElement showPasswordButton = wait.Until(drv => drv.FindElement(By.CssSelector(locators["showPasswordButton"])));
+            showPasswordButton.Click();
+        }
+
+        public string GetFilledPassword()
+        {
+            return Driver.FindElement(By.CssSelector(locators["password"])).GetAttribute("value");
+        }
     }
 }

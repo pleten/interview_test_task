@@ -68,14 +68,14 @@ namespace Ssl_web_tests
 
             //User name 
             Driver.FindElement(By.CssSelector(locators["OpenNameFieldToEdit"])).Click();
-            userInfo.FirstName = Driver.FindElement(By.CssSelector(locators["NameField"])).Text;
-            userInfo.LastName = Driver.FindElement(By.CssSelector(locators["LastNameField"])).Text;
+            userInfo.FirstName = Driver.FindElement(By.CssSelector(locators["NameField"])).GetAttribute("value");
+            userInfo.LastName = Driver.FindElement(By.CssSelector(locators["LastNameField"])).GetAttribute("value");
             userInfo.FullName = userInfo.GetFullName();
             Driver.FindElement(By.CssSelector(locators["cancelButton"])).Click();
 
             //User email
             Driver.FindElement(By.CssSelector(locators["OpenEmailFieldToEdit"])).Click();
-            userInfo.Email = Driver.FindElement(By.CssSelector(locators["EmailField"])).Text;
+            userInfo.Email = Driver.FindElement(By.CssSelector(locators["EmailField"])).GetAttribute("value");
             Driver.FindElement(By.CssSelector(locators["cancelButton"])).Click();
 
             //Phone number

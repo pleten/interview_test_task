@@ -100,5 +100,19 @@ namespace Ssl_web_tests
 
             Assert.AreEqual(expectedURL, pageService.Navigator.GetCurrentUrl());
         }
+
+        [Test]
+        public void FilledPasswordShouldBeDisplayedInTheFieldInViewMode()
+        {
+            //pre-condition
+            pageService.Navigator.GoToAutorizationPage();
+            pageService.LoginService.FillPasswordField(registeredUser.Password);
+            pageService.LoginService.ShowPassword();
+
+            string actualPassword = pageService.LoginService.GetFilledPassword();
+
+            Assert.AreEqual(registeredUser.Password, actualPassword);
+
+        }
     }
 }
