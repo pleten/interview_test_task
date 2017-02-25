@@ -24,6 +24,8 @@ namespace Ssl_web_tests
             return JsonConvert.DeserializeObject<List<LoginData>>(File.ReadAllText(dir + @"\credentials.json"));
         }
 
+
+        //Test should be failed with one of emails, which are contained in credentials.json file
         [Test, TestCaseSource("LoginCredentialsFromJsonFile")]
         public void WarningMessageDisplayingDueToInvalidEmail(LoginData userCredentials)
         {
