@@ -12,11 +12,12 @@ namespace Ssl_web_tests.Tests
     [TestFixture]
     public class UserProfileTests:BasicTestClass
     {
+        LoginData registeredUser = new LoginData("ssls.automation+4@gmail.com", "123456");
+
         [Test]
         public void SupportPinShouldBeUpdated()
         {
-            LoginData registeredUser = new LoginData("ssls.automation+4@gmail.com", "123456");
-
+            
             //pre-condition
             pageService.Navigator.GoToAutorizationPage();
             pageService.LoginService.LoginAs(registeredUser);
@@ -29,6 +30,21 @@ namespace Ssl_web_tests.Tests
             string updatedSupportPin = pageService.PersonalDataService.GetCurrentPin();
             //verification
             Assert.AreNotEqual(oldSupportPin, updatedSupportPin);
+        }
+
+        [Test]
+        public void PersonalDataFieldsShouldNotBeEmpty()
+        {
+            pageService.Navigator.GoToAutorizationPage();
+            pageService.LoginService.LoginAs(registeredUser);
+            pageService.ProfileNavigator.GoToUserProfilePage();
+            PersonalData ViewModeFieldsValues = pageService.PersonalDataService.GetPersonalDataListFromViewMode();
+        
+            Assert.IsFalse(ViewModeFieldsValues.FullName == null);
+            Assert.IsFalse(ViewModeFieldsValues.Email == null);
+            Assert.IsFalse(ViewModeFieldsValues.FullPhoneNumber == null);
+            Assert.IsFalse(ViewModeFieldsValues.FullAddress == null);
+            Assert.IsFalse((ViewModeFieldsValues.SupportPin== null) || (ViewModeFieldsValues.SupportPin == ""));
         }
     }
 }
