@@ -1,8 +1,11 @@
 ## Repository description:
 
-This repository is for uploading results of the completed test task.
+Prepare environment:
+- Download and install NodeJs
+- Open cmd with administrator access and install protractor executing command 'npm install -g protractor'  
+- Download and install Java JDK
+- Update webdriver-manager executing command 'webdriver-manager update' in cmd which should be opened with administrator access
+- Start webdriver-manager executing command 'webdriver-manager start'
 
-- You should create new project from a scratch. Project could be developed with any programming language and any framework you want.
-- Project should be in the new branch. 
-- Create new Pull Request when task will be finished.
-- Project should contain covered test cases that are described in task document and contain instructions how to build and run your project.
+Run test:
+- To run tests open in cmd conf directory of the project and execute command 'protractor conf.js'
