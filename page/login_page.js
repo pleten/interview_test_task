@@ -4,7 +4,7 @@ var login_page = function(){
 
 	var _emailField = element(by.model('form.email'));
 	var _passwordField = element(by.model('form.password'));
-	var _showPassBtn = element(by.css('button[ng-click*="showPassword"]'));
+	var _showPassBtn = element(by.css('[ng-click*="showPassword"]'));
 	var _loginBtn = element.all(by.css('[class="btn block primary"]'));
 
 	var EC = protractor.ExpectedConditions;
@@ -40,9 +40,9 @@ var login_page = function(){
 	};
 
 	this.getErrorMessage=function(){
-		var messageBy = by.xpath("//span[@class='noty_text']");
-        browser.wait(EC.presenceOf(element(messageBy)), 5000);
-		return element(messageBy).getText().then(function(text){
+		var msgCss = ".noty_text";
+        browser.wait(EC.presenceOf($(msgCss)), 5000);
+		return $(msgCss).getText().then(function(text){
 			return text;
 		});
 	};

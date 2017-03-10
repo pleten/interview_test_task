@@ -2,9 +2,9 @@ require('../page/login_page.js');
 require('../page/profile_page.js');
 
 var header = function(){
-    var _header = element(by.xpath("//div[@class='header clear']"));
+    var _header = $('[class="header clear"]');
     var _loginButton = _header.element(by.xpath(".//a[contains(@class,'user-btn')] | //a[@ui-sref='authorize.index']"));
-    var _expandUserMenuBtn = _header.element(by.xpath('.//button[@nc-dropdown-trigger="statusOpened"]'));
+    var _expandUserMenuBtn = _header.$('[nc-dropdown-trigger="statusOpened"]');
 
     this.openLoginForm = function(){
         _loginButton.click();
@@ -19,12 +19,12 @@ var header = function(){
 
     this.expandUserMenu=function(){
         _expandUserMenuBtn.click();
-        return _header.element(by.xpath(".//ul[@nc-dropdown='statusOpened']"));
+        return _header.$('[nc-dropdown="statusOpened"]');
     };
 
     this.logOut=function(){
         if(this.getLoginButtonText()!='Log in'){
-            var logOutBtn = this.expandUserMenu().element(by.xpath('//button[@ng-click="logout()"]')).click();
+            var logOutBtn = this.expandUserMenu().$(('[ng-click="logout()"]')).click();
             return require('./login_page.js');
         }
     };

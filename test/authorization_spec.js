@@ -1,3 +1,4 @@
+var util = require('util');
 describe('Verify authorization page.', function(){
 	var siteUrl = 'https://ssls.com';
 	beforeEach(function(){
