@@ -1,0 +1,17 @@
+{
+  "name": "interview_test_task",
+  "version": "0.0.1",
+  "description": "E2E tests to login page",
+  "main": "protractor.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pleten/interview_test_task"
+  },
+  "dependencies": {
+    "selenium-webdriver": "*",
+    "webdriver-manager": "*"
+  },
+  "author": "a.lukyanchenko",
+  "private": true,
+  "license": "ALLRIGHTSRESERVED"
+}
