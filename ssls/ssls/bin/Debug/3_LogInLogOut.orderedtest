@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="LogInLogOut" storage="c:\users\anton\documents\visual studio 2017\projects\ssls\ssls\loginlogout.orderedtest" id="96c8d5ac-f3e0-4118-80a6-2ac1feb26430" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="305c8336-7866-f816-a033-bcdea5ce809d" name="Test1" storage="bin\debug\ssls.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="02f9bb80-61e7-e21d-ee56-93377e7a4960" name="Test5" storage="bin\debug\ssls.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="5_profile" storage="c:\users\anton\documents\visual studio 2017\projects\ssls\ssls\5_profile.orderedtest" id="dd1728ea-b2df-43e2-8bff-1c7d997f321b" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="013dbffb-4965-d232-0175-d2ae966b409c" name="Test6" storage="bin\debug\ssls.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="e95d7398-9f88-bfc9-66e1-a59fdc9e8b17" name="Test7" storage="bin\debug\ssls.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

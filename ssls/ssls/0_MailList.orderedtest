@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="0_MailList" storage="c:\users\anton\documents\visual studio 2017\projects\ssls\ssls\0_maillist.orderedtest" id="1ecad418-0fdd-405e-8e9b-5af99541ede6" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="3caa2ed3-1f7e-4700-8625-fdf5e0bc217c" name="1_Settings" storage="1_settings.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="7672904a-0336-4c0d-a120-3b2070291351" name="2_CommonTests" storage="2_commontests.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="96c8d5ac-f3e0-4118-80a6-2ac1feb26430" name="3_LogInLogOut" storage="3_loginlogout.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="2cf1b451-0e58-4370-bbf3-1c5d57cf451b" name="4_AuthorizationPage" storage="4_authorizationpage.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="dd1728ea-b2df-43e2-8bff-1c7d997f321b" name="5_Profile" storage="5_profile.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="10703a67-bb63-4ed9-b1a9-5d5ed39b2764" name="6_HomeFilters" storage="6_homefilters.orderedtest" type="Microsoft.VisualStudio.TestTools.TestTypes.Ordered.AutoSuite, Microsoft.VisualStudio.QualityTools.Tips.OrderedTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

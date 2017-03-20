@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="1_Settings" storage="c:\users\anton\documents\visual studio 2017\projects\ssls\ssls\1_settings.orderedtest" id="3caa2ed3-1f7e-4700-8625-fdf5e0bc217c" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="17d3a461-173f-a05e-7925-aea7d2eb5b4a" name="createErrorDirectory" storage="bin\debug\ssls.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="4_authorizationpage" storage="c:\users\anton\documents\visual studio 2017\projects\ssls\ssls\4_authorizationpage.orderedtest" id="2cf1b451-0e58-4370-bbf3-1c5d57cf451b" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="b109ebbb-1a5e-67f7-8d7f-efddd8e426de" name="Test2" storage="bin\debug\ssls.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="a3f52df7-cdc6-3fac-e9fe-0826ca5b858a" name="Test3" storage="bin\debug\ssls.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="2320831f-31e6-acec-9c7a-ad71a3dc12b6" name="Test4" storage="bin\debug\ssls.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

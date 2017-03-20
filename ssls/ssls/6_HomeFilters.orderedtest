@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="6_homefilters" storage="c:\users\anton\documents\visual studio 2017\projects\ssls\ssls\6_homefilters.orderedtest" id="10703a67-bb63-4ed9-b1a9-5d5ed39b2764" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="76a862d5-fca6-d7db-d1ad-e0656f878d97" name="Test8p1" storage="bin\debug\ssls.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="b766f6dd-2d10-f787-1950-59f670e575d7" name="Test8p2" storage="bin\debug\ssls.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="0bd59550-44f3-28ab-44e0-122fbb66b094" name="Test8p3" storage="bin\debug\ssls.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="942b3700-e36a-e7b7-22a0-1fa00b3b6f72" name="Test8p4" storage="bin\debug\ssls.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="afa1682a-e7aa-ebe8-2a08-c133dcd7719e" name="Test8p5" storage="bin\debug\ssls.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>
