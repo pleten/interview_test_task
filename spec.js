@@ -102,13 +102,6 @@ describe('Authorization Page Demo', function() {
         usermenu.click();
         profilemenu.click();
         editnamebutton.click();
-
-
-
-
-
-
-        //than we should logout and click on this button.
-        //for moment of test writing there is no opportunity to work with these tests cause login and password has changed from test site
-        });
+        //this test raised a problems for me
+      });
 });
