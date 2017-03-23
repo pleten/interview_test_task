@@ -1,7 +1,7 @@
 //spec.js
 describe('Authorization Page Demo', function() {
     var homepage = "https://ssls.com";
-    var validemailforlogin = "ssls.automation+4@gmail.com";
+    var validemailforlogin = "ssls.automation+5@gmail.com";
     var validpasswordforlogin = "123456";
     var loginbuttonunlogged = element(by.css('.log-box > a'));
     var loginbuttonlogged = element(by.css('.log-box > div > a'));
@@ -13,6 +13,30 @@ describe('Authorization Page Demo', function() {
     var incorrectmailmessage = element(by.css('.noty_text'));
     var notemailalert = element(by.css('.form-group.email > div:nth-of-type(1) > div > div:nth-of-type(1) > .tooltip-text'));
     var notpasswordalert=element(by.css('.input-group > .left-tooltip-box > div > div:nth-of-type(1) > .tooltip-text'));
+    var usermenu=element(by.css('.log-box > div > button'));
+    var logoutbutton=element(by.css('.drop-button'));
+    var welcomeback=element(by.css("form[name='authForm'] > .text"));
+    var profilemenu=element(by.css(".dropdown.ng-isolate-scope > li:nth-of-type(5) > .drop-link"));
+    var pname=element(by.css("form[name='form'] > div:nth-of-type(1) > .description > span"));
+    var editnamebutton=element(by.css("form[name='form'] > div:nth-of-type(1) > button"));
+    var usernameedit=by.css("input[name='name']")
+    var lastname=by.css("input[name='lastName']")
+    var edituserbutton=by.css("input[name='lastName']")
+    var email=element(by.css("button[type='submit']"));
+    var editemailbutton=element(by.css(""));
+    var password=element(by.css(""));
+    var editpasswordbutton=element(by.css(""));
+    var phone=element(by.css(""));
+    var editphonebutton=element(by.css(""));
+    var adress=element(by.css(""));
+    var editadressbutton=element(by.css(""));
+    var supportpin=element(by.css(""));
+    var editsupportpin=element(by.css(""));
+    var newsletter=element(by.css(""));
+
+
+
+
     beforeEach(function() {
         browser.get(homepage);
     });
@@ -64,10 +88,27 @@ describe('Authorization Page Demo', function() {
         loginfield.sendKeys(validemailforlogin);
         paswordfield.sendKeys(validpasswordforlogin);
         entersystembutton.click();
+        usermenu.click();
+        logoutbutton.click();
+        expect(browser.getCurrentUrl()).toEqual(homepage+'/authorize');
+        expect(welcomeback.getText()).toEqual('Welcome back!');
+        });
+
+    it('6. My profile page. Client area', function() {
+        loginbuttonunlogged.click();
+        loginfield.sendKeys(validemailforlogin);
+        paswordfield.sendKeys(validpasswordforlogin);
+        entersystembutton.click();
+        usermenu.click();
+        profilemenu.click();
+        editnamebutton.click();
+
+
+
+
+
 
         //than we should logout and click on this button.
         //for moment of test writing there is no opportunity to work with these tests cause login and password has changed from test site
-        
-
-
+        });
 });
