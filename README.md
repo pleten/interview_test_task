@@ -1,8 +1,9 @@
-## Repository description:
+# Project Setup
 
-This repository is for uploading results of the completed test task.
+* Install npm by following the [instructions](https://docs.npmjs.com/getting-started/installing-node) 
+* Install protractor with `npm install` from project root.
+* Run `npm run webdriver-manager update`
 
-- You should create new project from a scratch. Project could be developed with any programming language and any framework you want.
-- Project should be in the new branch. 
-- Create new Pull Request when task will be finished.
-- Project should contain covered test cases that are described in task document and contain instructions how to build and run your project.
+# Running tests
+* Start webdriver-server with `npm run webdriver-manager start`
+* Run tests with `npm test`
