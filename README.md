@@ -21,7 +21,7 @@ The `Array.prototype.takeRandom` method implemented to take random values from d
 
 * Tests are run in Google Chrome by default. To run in a different browser 
 change the `browserName` key value to required in `protractor.conf.js` file. To 
-run against multiple browsers - add anothe object of `{ browserName: 'BROWSER_NAME'}`
+run against multiple browsers - add another object of `{ browserName: 'BROWSER_NAME'}`
 to the `multiCapabilities` config option.
 
 * Jasmine output is suppressed by default. To enable it comment out the
