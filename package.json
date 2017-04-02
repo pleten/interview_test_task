@@ -4,12 +4,16 @@
   "description": "Testing framework with Protractor",
   "main": "index.js",
   "dependencies": {
-    "protractor": "^5.1.1"
+    "faker": "^4.1.0",
+    "jasmine-spec-reporter": "^3.2.0",
+    "protractor": "^5.1.1",
+    "protractor-jasmine2-html-reporter": "0.0.7"
   },
   "devDependencies": {},
   "scripts": {
     "protractor": "node_modules/protractor/bin/protractor",
-    "webdriver-manager": "node_modules/protractor/bin/webdriver-manager",
+    "wd-update": "node_modules/protractor/bin/webdriver-manager update",
+    "wd-start": "node_modules/protractor/bin/webdriver-manager start",
     "test": "protractor"
   },
   "repository": {

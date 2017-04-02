@@ -1,47 +1,77 @@
-(function(){
+(function() {
   'use strict';
 
   var BasePage = require('./BasePage');
 
-  function LoginPage(){
-    this.title              = "Sign In | SSLs.com";
-    this.email_field        = element(by.model('form.email'));
-    this.login_button       = element(by.buttonText('Login'));
-    this.passord_field      = element(by.model('form.password'));
-    this.show_password_icon = element(by.className('icon-eye'));
-  }
-
   LoginPage.prototype.__proto__   = BasePage.prototype;
   LoginPage.prototype.constructor = LoginPage;
 
-  LoginPage.prototype.set_email = function(email){
-    this.email_field.sendKeys(email);
+  function LoginPage() {
+    this.URL              = '/authorize';
+    this.title            = "Sign In | SSLs.com";
+    this.loginBtn         = function() {return element(by.buttonText('Login'))};
+    this.emailField       = function() {return element(by.model('form.email'))};
+    this.passwordField    = function() {return element(by.model('form.password'))};
+    this.showPasswordIcon = function() {return $('.icon-eye')};
+
+    this.invalidEmailTooltip = function() {
+      return $('.form-group.email div.left-tooltip-box:nth-of-type(1)');
+    };
+
+    this.emptyEmailTooltip = function() {
+      return $('.form-group.email div.left-tooltip-box:nth-of-type(2)');
+    };
+
+    this.emptyPasswordTooltip = function() {
+      return $('form[name="authForm"] .input-group .tooltip-text');
+    };
+  }
+
+  LoginPage.prototype.setEmail = function(email) {
+    email = email || this.defaultEmail;
+
+    this.emailField().sendKeys(email);
   };
 
-  LoginPage.prototype.set_password = function(password){
-    this.passord_field.sendKeys(password);
+  LoginPage.prototype.setPassword = function(password) {
+    password = password || this.defaultPassword;
+
+    this.passwordField().sendKeys(password);
   };
 
-  LoginPage.prototype.show_password = function(){
-    this.show_password_icon.click();
+  LoginPage.prototype.showPassword = function() {
+    this.showPasswordIcon().click();
   };
 
-  LoginPage.prototype.click_login_button = function(){
-    this.login_button.click();
+  LoginPage.prototype.clickLoginButton = function() {
+    this.loginBtn().click();
   };
 
-  LoginPage.prototype.verify_password_visible = function(){
-    expect(this.passord_field.getAttribute('type')).toEqual('text');
+  LoginPage.prototype.login = function(email, password) {
+    this.visit();
+    this.setEmail(email);
+    this.setPassword(password);
+    this.clickLoginButton();
   };
 
-  LoginPage.prototype.verifyTitle = function(){
-    expect(browser.getTitle()).toEqual(this.title);
+  LoginPage.prototype.verifyPasswordVisible = function(password) {
+    password           = password || this.defaultPassword;
+    var password_field = this.passwordField();
+
+    expect(password_field.getAttribute('type')).toEqual('text');
+    expect(password_field.getAttribute('value')).toEqual(password);
   };
 
-  LoginPage.prototype.verifyUrl = function(){
-    browser.getCurrentUrl().then(function(url){
-      expect(url).toEqual(browser.baseUrl + '/authorize')
-    });
+  LoginPage.prototype.verifyInvalidEmailTooltip = function(text) {
+    this.verifyTooltip(this.invalidEmailTooltip(), text);
+  };
+
+  LoginPage.prototype.verifyEmptyEmailTooltip = function(text) {
+    this.verifyTooltip(this.emptyEmailTooltip(), text);
+  };
+
+  LoginPage.prototype.verifyEmptyPasswordTooltip = function(text) {
+    this.verifyTooltip(this.emptyPasswordTooltip(), text);
   };
 
   module.exports = new LoginPage();
