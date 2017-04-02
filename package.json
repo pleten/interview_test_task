@@ -1,0 +1,29 @@
+{
+  "name": "interview_test_task",
+  "version": "1.0.0",
+  "description": "Testing framework with Protractor",
+  "main": "index.js",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "jasmine-spec-reporter": "^3.2.0",
+    "protractor": "^5.1.1",
+    "protractor-jasmine2-html-reporter": "0.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "protractor": "node_modules/protractor/bin/protractor",
+    "wd-update": "node_modules/protractor/bin/webdriver-manager update",
+    "wd-start": "node_modules/protractor/bin/webdriver-manager start",
+    "test": "protractor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pleten/interview_test_task.git"
+  },
+  "author": "Tymur Daudov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pleten/interview_test_task/issues"
+  },
+  "homepage": "https://github.com/pleten/interview_test_task#readme"
+}
