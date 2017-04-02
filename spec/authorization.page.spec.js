@@ -1,8 +1,10 @@
 (function() {
   'use strict';
 
-  var faker = require('faker');
   var homePage, loginPage;
+
+  var faker    = require('faker');
+  var testData = require('./data/test.data');
 
   describe('Authorization page.', function() {
     beforeEach(function() {
@@ -85,7 +87,7 @@
 
     it('Invalid email', function() {
       // 3. On the authorization page enter invalid email and valid password
-      loginPage.setEmail('ssls.automation @gmail.com');
+      loginPage.setEmail(testData.emails.invalid.takeRandom());
       loginPage.setPassword();
 
       // FIXME: step not present, but expected result is!

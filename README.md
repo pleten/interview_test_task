@@ -7,12 +7,15 @@ BasePage object.
 # Project Setup
 
 * Install npm by following the [instructions](https://docs.npmjs.com/getting-started/installing-node) 
-* Install required modules with `npm install` from project root.
-* Run `npm run wd-update`.
+* Install required modules with `npm install` from project root
+* Run `npm run wd-update`
 
 # Running tests
 * Start webdriver-server with `npm run wd-start`
 * Run tests with `npm test`
+* Big amount of test data shall be kept in the `spec/data/test.data.js` file.
+The `Array.prototype.takeRandom` method implemented to take random values from data arrays.
+* Reports available in the `reports` folder
 
 # Configuration
 

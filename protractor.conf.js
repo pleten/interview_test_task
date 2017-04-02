@@ -13,18 +13,25 @@ exports.config = {
     showColors: true,
     print: function() {}
   },
-
-  onPrepare: function() {
-    var SpecReporter = require('jasmine-spec-reporter').SpecReporter;
-    var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
-
-    jasmine.getEnv().addReporter(new SpecReporter({ displayStacktrace: 'all' }));
-    jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
-      savePath: './reports/',
-      screenshotsFolder: 'images',
-      takeScreenshotsOnlyOnFailures: true
-    }));
-
-    browser.driver.manage().window().maximize();
-  }
+  onPrepare: Prepare
 };
+
+function Prepare() {
+  var SpecReporter = require('jasmine-spec-reporter').SpecReporter;
+  var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
+
+  jasmine.getEnv().addReporter(new SpecReporter({ displayStacktrace: 'all' }));
+  jasmine.getEnv().addReporter(new Jasmine2HtmlReporter({
+    savePath: './reports/',
+    screenshotsFolder: 'images',
+    takeScreenshotsOnlyOnFailures: true
+  }));
+
+  Array.prototype.takeRandom = function(){
+    var index = Math.round(Math.random() * (this.length - 1));
+
+    return this[index];
+  };
+
+  browser.driver.manage().window().maximize();
+}
