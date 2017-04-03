@@ -1,0 +1,4 @@
+Test is written on Protractor
+To run the test you need to run command line in conf folder and hit "protractor conf.js"
+To setup all the needed tools pleae check this tutorial:
+https://youtu.be/57134cHJlAs?list=PLw5h0DiJ-9PCGYuOY8PTqN67w-A2T9fsb
