@@ -1,0 +1,39 @@
+{
+  "output": "./output",
+  "helpers": {
+    "WebDriverIO": {
+      "url": "https://ssls.com",
+      "browser": "chrome",
+      "waitForTimeout": "10000",
+      "desiredCapabilities": {
+        "chromeOptions": {
+          "args": [
+            "--start-maximized",
+            "--disable-infobars"
+          ],
+          "prefs": {
+            "credentials_enable_service": false,
+            "password_manager_enabled": false
+          }
+        }
+      }
+    },
+    "Datagenerator": {
+      "require": "./helpers/datagenerator_helper.js"
+    }
+  },
+  "include": {
+    "I": "./steps_file.js",
+    "header": "./fragments/header.js",
+    "homePage": "./pages/homePage.js",
+    "authorizationPage": "./pages/authorizationPage.js",
+    "profilePage": "./pages/profilePage.js"
+  },
+  "mocha": {},
+  "bootstrap": false,
+  "teardown": null,
+  "hooks": [],
+  "tests": "./tests/*_test.js",
+  "timeout": 10000,
+  "name": "ssls_tests"
+}

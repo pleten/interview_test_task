@@ -1,8 +1,19 @@
-## Repository description:
+#### Preparing Environment
+Your machine should have installed NodeJS, Chrome 58 or higher and installed webdriver-manager
+(You can install webdriver manager using ``npm install -g webdriver-manager`` command
 
-This repository is for uploading results of the completed test task.
+#### Running tests via Bash script
+Navigate to root directory and execute ``sh run_tests.sh`` command to run tests via Bash script
 
-- You should create new project from a scratch. Project could be developed with any programming language and any framework you want.
-- Project should be in the new branch. 
-- Create new Pull Request when task will be finished.
-- Project should contain covered test cases that are described in task document and contain instructions how to build and run your project.
+If you will get any errors try alternative path:
+#### Installing dependencies and starting webdriver-manager
+1. Navigate to root directory and execute ``npm install`` command to resolve dependencies
+2. Get latest selenium server using ``node_modules/webdriver-manager/bin/webdriver-manager update``
+3. Star selenium server using ``node_modules/webdriver-manager/bin/webdriver-manager start``
+
+#### Run tests
+1. Open one more terminal instance and navigate to the root of the current testsuite
+2. Run ``node_modules/codeceptjs/bin/codecept.js run --steps --reporter mochawesome`` command
+
+#### Test results
+Tests execution progress will be displayed in console. Once all tests are done html report will be saved in ``mochawesome-report`` folder.

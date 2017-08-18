@@ -1,0 +1,21 @@
+{
+  "name": "ssls_tests",
+  "version": "1.0.0",
+  "description": "ssls_tests",
+  "main": "ssls_tests_test.js",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "chai": "^4.1.1",
+    "chai-sorted": "^0.1.0",
+    "codeceptjs": "1.0.1",
+    "codeceptjs-webdriverio": "^1.1.0",
+    "mochawesome": "2.2.0"
+  },
+  "repository": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Alex",
+  "license": "ISC"
+}
