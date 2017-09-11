@@ -1,0 +1,18 @@
+{
+  "name": "interview_test_task",
+  "version": "1.0.0",
+  "description": "This repository is for uploading results of the completed test task.",
+  "main": "tests/tests.js",
+  "scripts": {
+    "test": "mocha -t 100000 .\\tests\\tests.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "selenium-webdriver": "3.3.0",
+    "chai": "4.1.0",
+    "mocha": "3.0.2",
+    "mochawesome": "2.3.0"
+  },
+  "homepage": "https://github.com/pleten/interview_test_task#readme"
+}
