@@ -1,0 +1,9 @@
+# dependencies
+/node_modules
+package-lock.json
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+/.idea
+/target

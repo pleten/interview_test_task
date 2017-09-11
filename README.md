@@ -1,8 +1,14 @@
 ## Repository description:
+Test Task Nesvitiy Nikolay
 
-This repository is for uploading results of the completed test task.
+## How to install
 
-- You should create new project from a scratch. Project could be developed with any programming language and any framework you want.
-- Project should be in the new branch. 
-- Create new Pull Request when task will be finished.
-- Project should contain covered test cases that are described in task document and contain instructions how to build and run your project.
+- `git clone`
+- `npm i`
+- `npm run pree2e`
+
+## Running end-to-end tests
+
+- `npm run e2e`
+
+## Html reporter in target/screenshots directory
