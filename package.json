@@ -1,0 +1,19 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "interview_test_task",
+  "main": "conf.js",
+  "devDependencies": {
+    "jasmine": "^2.6.0",
+    "jasmine-reporters": "^2.0.0",
+    "jasmine-spec-reporter": "latest",
+    "protractor": "latest"
+  },
+  "scripts": {
+    "update_driver":"node node_modules/protractor/bin/webdriver-manager update",
+    "start_driver":"node node_modules/protractor/bin/webdriver-manager start",
+    "tests": "node node_modules/protractor/bin/protractor conf.js --baseUrl=https://ssls.com"
+  },
+  "author": "paxa1887@gmail.com",
+  "license": "ISC"
+}
