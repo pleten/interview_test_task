@@ -1,0 +1,36 @@
+{
+    "users": {
+        "registered": {
+            "email": "ssls.automation+5@gmail.com",
+            "password": "123456",
+            "isNotRegistered": false,
+            "isPasswordCheckRequired": true
+        },
+        "unregistered": {
+            "email": "unregistered@gmail.com",
+            "password": "654321",
+            "isNotRegistered": true,
+            "isPasswordCheckRequired": false
+        },
+        "invalidEmail": {
+            "email": "ssls.automation+5@@gmail.com",
+            "password": "123456",
+            "isNotRegistered": false,
+            "isPasswordCheckRequired": false
+        },
+        "emptyFields": {
+            "email": "",
+            "password": "",
+            "isNotRegistered": false,
+            "isPasswordCheckRequired": false
+        }
+    },
+    "data": {
+        "errors": {
+            "incorrectEmail": "Uh oh! Email or password is incorrect",
+            "invalidEmail": "Uh oh! This\nisn’t an email",
+            "emptyEmail": "Oops, please\nenter your email",
+            "emptyPassword": "Looks like you’ve\nmissed this one"
+        }
+    }
+}

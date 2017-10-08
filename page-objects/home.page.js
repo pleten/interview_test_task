@@ -12,15 +12,13 @@ var HomePage = function() {
     };
 
     this.logout = function() {
-        this.profileMenu.click().then(function() {
-            this.logoutLink.click();
-        })
+        this.profileMenu.click();
+        this.logoutLink.click();
     }
 
     this.viewProfile = function() {
-        this.profileMenu.click().then(function() {
-            this.profileLink.click();
-        })
+        this.profileMenu.click();
+        this.profileLink.click();
     }
 }
 

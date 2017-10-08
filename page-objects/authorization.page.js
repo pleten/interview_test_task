@@ -1,3 +1,5 @@
+var helpers = require('protractor-helpers');
+
 var AuthorizationPage = function() {
 
     this.email = element(by.model('form.email'));
@@ -8,22 +10,23 @@ var AuthorizationPage = function() {
     this.emptyPasswordError = element(by.xpath("//span[@class='tooltip-text' and contains(text(),'Looks')]"));
     this.tooltipMessage = element(by.css('.tooltip-text'));
     this.eyeIcon = element(by.css('.btn-input'));
-
     this.authContainer = element(by.css('.authorization-page'));
+
+    var data = browser.params.data;
 
 
     this.login = function(user) {
         this.email.sendKeys(user.email);
         this.password.sendKeys(user.password);
-        this.checkPassword(this.password, user.password)
+        user.isPasswordCheckRequired && this.checkPassword(this.password, user.password);
         this.loginBtn.click();
+        user.isNotRegistered && helpers.waitForElement(this.errorMessage, 1000);
     }
 
-    this.checkPassword = function(element, data) {
+    this.checkPassword = function(element, password) {
         this.eyeIcon.click();
-        element.getAttribute('value').then(function(value) {
-            expect(value).toEqual(data);
-        })
+        expect(element.getAttribute('type')).toEqual('text');
+        expect(element.getAttribute('value')).toEqual(password);
     }
 }
 
