@@ -1,0 +1,23 @@
+{
+  "name": "ssls-test-task",
+  "version": "1.0.0",
+  "description": "This repository is for uploading results of the completed test task.",
+  "scripts": {
+    "e2e": "protractor conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pleten/interview_test_task.git"
+  },
+  "author": "Dmitry Danilich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pleten/interview_test_task/issues"
+  },
+  "homepage": "https://github.com/pleten/interview_test_task#readme",
+  "dependencies": {
+    "protractor": "^5.1.2",
+    "protractor-helpers": "^1.1.0",
+    "protractor-jasmine2-html-reporter": "0.0.7"
+  }
+}
