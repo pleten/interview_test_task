@@ -5,12 +5,10 @@ var BaseTest = function() {
         browser.get(browser.baseUrl + url);
     };
 
-    this.getLocalStorage = function() {
-        browser.executeScript("return window.localStorage;");
-    };
-
     this.clearLocalStorage = function() {
-        browser.executeScript("return window.localStorage.clear();");
+        browser.executeScript('window.localStorage.clear();');
+        browser.executeScript('window.sessionStorage.clear();');
+        browser.driver.manage().deleteAllCookies();
     };
 };
 

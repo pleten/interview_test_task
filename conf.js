@@ -5,20 +5,17 @@ exports.config = {
     allScriptsTimeout: 150000,
     maxSessions: 1,
 
-    params: {
-        login: {
-            email: 'ssls.automation+5@gmail.com',
-            password: '123456'
-        }
-    },
-
     capabilities: {
-        'browserName': 'chrome'
+        browserName: 'chrome',
+
+        chromeOptions: {
+            args: ["--headless", "--disable-gpu", "--window-size=800,600"]
+        }
     },
 
     framework: 'jasmine',
 
-    specs: ['Tests/AuthorizationTests.js'],
+    specs: ['Tests/AuthorizationTests.js', 'Tests/GeneralTests.js', 'Tests/ProfileTests.js', 'Tests/HomeTests.js'],
 
     jasmineNodeOpts: {
         defaultTimeoutInterval: 1000000
