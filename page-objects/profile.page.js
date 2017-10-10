@@ -7,7 +7,7 @@ var Profile = function() {
     this.supportPinRefreshBtn = element(by.model('user.supportPin'));
 
     //TODO: document method
-    this.getData = function() {
+    this.getData = function(filter) {
         var profile = {};
         var name,value;
 
@@ -23,8 +23,9 @@ var Profile = function() {
             }).then(function() {
                 expect(name.length > 0).toBeTruthy();
                 expect(value.length > 0).toBeTruthy();
-                profile[name] = value;
-                name.includes("Newsletter") && (self.newsToggle.getAttribute('checked').then(function(value) {
+                (name.includes(filter)) && (profile[name] = value);
+                (typeof filter === 'undefined') && (profile[name] = value);
+                (typeof filter === 'undefined' && name.includes("Newsletter")) && (self.newsToggle.getAttribute('checked').then(function(value) {
                     profile[name] = value;
                 }));
             })

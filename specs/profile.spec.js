@@ -31,5 +31,20 @@ describe('My Profile -', function() {
             profile.verifyData(profileData);
         })
     });
+
+    it('Refresh Support Pin', function() {
+        var oldPin;
+        var filterCriterion = "Support pin";
+
+        profile.getData(filterCriterion).then(function(data) {
+            oldPin = data;
+        }).then(function() {
+            profile.supportPinRefreshBtn.click();
+        }).then(function() {
+            profile.getData(filterCriterion).then(function(newPin) {
+                expect(oldPin[filterCriterion]).not.toEqual(newPin[filterCriterion]);
+            })
+        })
+    })
 });
 
