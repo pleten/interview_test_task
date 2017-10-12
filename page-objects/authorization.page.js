@@ -1,32 +1,38 @@
 var helpers = require('protractor-helpers');
 
 var AuthorizationPage = function() {
+    var self = this;
+    var data = browser.params.data;
 
+    this.emptyPasswordError = $("div[class='form-group'] div[class='left-tooltip-box']")
+    this.emptyEmailError = $(".email div[class='left-tooltip-box']")
+    this.tooltipMessage = $('.tooltip-text');
+    this.authContainer = $('.authorization-page');
+    this.errorMessage = $('.noty_text');
+    this.eyeIcon = $('.btn-input');
     this.email = element(by.model('form.email'));
     this.password = element(by.model('form.password'));
     this.loginBtn = element(by.buttonText('Login'));
-    this.errorMessage = element(by.css('.noty_text'));
-    this.emptyEmailError = element(by.xpath("//span[@class='tooltip-text' and contains(text(),'Oops')]"));
-    this.emptyPasswordError = element(by.xpath("//span[@class='tooltip-text' and contains(text(),'Looks')]"));
-    this.tooltipMessage = element(by.css('.tooltip-text'));
-    this.eyeIcon = element(by.css('.btn-input'));
-    this.authContainer = element(by.css('.authorization-page'));
-
-    var data = browser.params.data;
 
 
+    /**
+     * @param {object} user
+     */
     this.login = function(user) {
         this.email.sendKeys(user.email);
         this.password.sendKeys(user.password);
-        user.isPasswordCheckRequired && this.checkPassword(this.password, user.password);
+        user.isPasswordCheckRequired && checkPassword(user.password);
         this.loginBtn.click();
         user.isNotRegistered && helpers.waitForElement(this.errorMessage, 1000);
     }
 
-    this.checkPassword = function(element, password) {
-        this.eyeIcon.click();
-        expect(element.getAttribute('type')).toEqual('text');
-        expect(element.getAttribute('value')).toEqual(password);
+    /**
+     * @param {string} password
+     */
+    function checkPassword(password) {
+        self.eyeIcon.click();
+        expect(self.password.getAttribute('type')).toEqual('text');
+        expect(self.password.getAttribute('value')).toEqual(password);
     }
 }
 

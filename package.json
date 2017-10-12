@@ -16,6 +16,8 @@
   },
   "homepage": "https://github.com/pleten/interview_test_task#readme",
   "dependencies": {
+    "lodash": "^4.17.4",
+    "moment": "^2.19.1",
     "protractor": "^5.1.2",
     "protractor-helpers": "^1.1.0",
     "protractor-jasmine2-html-reporter": "0.0.7"

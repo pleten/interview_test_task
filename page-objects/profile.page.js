@@ -1,12 +1,19 @@
+var _ = require('lodash');
+
 var Profile = function() {
     var self = this;
 
-    this.form = element(by.css('.panel form'));
+    this.form = $('.panel form');
     this.rows = this.form.$$('.item');
     this.newsToggle = element(by.model('user.newsletterOn'));
     this.supportPinRefreshBtn = element(by.model('user.supportPin'));
 
-    //TODO: document method
+    /**
+     * Returns profile data object if filter is not provided.
+     * Returns specific profile row data object if filter is provided.
+     * @param {string} filter - object with filtering params
+     * @returns {Promise<Object>}
+     */
     this.getData = function(filter) {
         var profile = {};
         var name,value;
@@ -21,8 +28,6 @@ var Profile = function() {
                     value = text;
                 });
             }).then(function() {
-                expect(name.length > 0).toBeTruthy();
-                expect(value.length > 0).toBeTruthy();
                 (name.includes(filter)) && (profile[name] = value);
                 (typeof filter === 'undefined') && (profile[name] = value);
                 (typeof filter === 'undefined' && name.includes("Newsletter")) && (self.newsToggle.getAttribute('checked').then(function(value) {
@@ -34,14 +39,20 @@ var Profile = function() {
         })
     }
 
-    //TODO: document method
+    this.isDataInvalid = function(data) {
+        for (var key in data) {
+            return (data[key] == null || data[key].length === 0);
+        }
+    }
+
+    /**
+     * Verifies retrieved profile data against provided test data
+     * @param {Object} profileData - profile test data
+     * @returns {Promise<Boolean>}
+     */
     this.verifyData = function(profileData) {
-        self.getData().then(function(data) {
-            for (var prop in profileData) {
-                (function(prop) {
-                    expect(data[prop]).toEqual(profileData[prop]);
-                })(prop);
-            }
+        return self.getData().then(function(data) {
+            return _.isEqual(profileData, data);
         });
     }
 

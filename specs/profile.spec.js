@@ -22,13 +22,14 @@ describe('My Profile -', function() {
         browser.controlFlow().execute(function() {
             expect(profile.form.isDisplayed()).toBeTruthy();
             profile.getData().then(function(data) {
+                expect(profile.isDataInvalid(data)).not.toBeTruthy();
                 profileData = data;
             })
             home.logout();
             auth.login(users.registered);
             home.viewProfile();
         }).then(function() {
-            profile.verifyData(profileData);
+            expect(profile.verifyData(profileData)).toBeTruthy();
         })
     });
 

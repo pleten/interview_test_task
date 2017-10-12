@@ -32,5 +32,98 @@
             "emptyEmail": "Oops, please\nenter your email",
             "emptyPassword": "Looks like you’ve\nmissed this one"
         }
+    },
+    "sslItems": {
+        "sslItem_0": {
+            "name": "EV SSL",
+            "price": 78.99,
+            "rating": 5,
+            "isPersonal": false,
+            "isMultiDomain": false
+        },
+        "sslItem_1": {
+            "name": "EV Multi-Domain SSL",
+            "price": 157.88,
+            "rating": 5,
+            "isPersonal": false,
+            "isMultiDomain": true
+        },
+        "sslItem_2": {
+            "name": "PositiveSSL",
+            "price": 4.99,
+            "rating": 5,
+            "isPersonal": true,
+            "isMultiDomain": false
+        },
+        "sslItem_3": {
+            "name": "PositiveSSL Multi-Domain",
+            "price": 25.98,
+            "rating": 5,
+            "isPersonal": true,
+            "isMultiDomain": true
+        },
+        "sslItem_4": {
+            "name": "PositiveSSL Wildcard",
+            "price": 84.99,
+            "rating": 5,
+            "isPersonal": true,
+            "isMultiDomain": false
+        },
+        "sslItem_5": {
+            "name": "EssentialSSL",
+            "price": 24.99,
+            "rating": 4,
+            "isPersonal": false,
+            "isMultiDomain": false
+        },
+        "sslItem_6": {
+            "name": "InstantSSL",
+            "price": 27.99,
+            "rating": 3.5,
+            "isPersonal": false,
+            "isMultiDomain": false
+        },
+        "sslItem_7": {
+            "name": "EssentialSSL Wildcard",
+            "price": 94.99,
+            "rating": 3.5,
+            "isPersonal": false,
+            "isMultiDomain": false
+        },
+        "sslItem_8": {
+            "name": "InstantSSL Pro",
+            "price": 42.99,
+            "rating": 3,
+            "isPersonal": false,
+            "isMultiDomain": false
+        },
+        "sslItem_9": {
+            "name": "PremiumSSL",
+            "price": 56.99,
+            "rating": 3,
+            "isPersonal": false,
+            "isMultiDomain": false
+        },
+        "sslItem_10": {
+            "name": "Unified Communications",
+            "price": 77.22,
+            "rating": 3,
+            "isPersonal": false,
+            "isMultiDomain": true
+        },
+        "sslItem_11": {
+            "name": "PremiumSSL Wildcard",
+            "price": 129.99,
+            "rating": 3,
+            "isPersonal": false,
+            "isMultiDomain": false
+        },
+        "sslItem_12": {
+            "name": "Multi-Domain SSL",
+            "price": 77.22,
+            "rating": 3,
+            "isPersonal": false,
+            "isMultiDomain": false
+        }
     }
 }

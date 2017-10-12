@@ -1,16 +1,14 @@
-var HomePage = require('../page-objects/home.page');
-var AuthorizationPage = require('../page-objects/authorization.page');
+var AuthorizationPage = require('../page-objects/authorization.page'),
+    HomePage = require('../page-objects/home.page');
 
 describe('Authorization Page -', function() {
-    var home = new HomePage();
-    var auth = new AuthorizationPage();
-    var users = browser.params.users;
-    var data = browser.params.data;
+    var home = new HomePage(),
+        auth = new AuthorizationPage(),
+        users = browser.params.users,
+        data = browser.params.data;
 
     beforeEach(function() {
-        browser.manage().deleteAllCookies();
-        home.go();
-        home.loginLink.click();
+        home.go().loginLink.click();
     });
 
     it('Welcome Back!', function() {
