@@ -7,8 +7,8 @@ exports.config = {
     framework: 'jasmine',
     params: require('./testdata.json'),
     specs: [
-        './specs/authorization.spec.js'
-        './specs/profile.spec.js'
+        './specs/authorization.spec.js',
+        './specs/profile.spec.js',
         './specs/home.spec.js'
     ],
     jasmineNodeOpts: {
