@@ -10,9 +10,10 @@
     "protractor": "latest"
   },
   "scripts": {
-    "update_driver": "node node_modules/protractor/bin/webdriver-manager update",
-    "start_driver": "node node_modules/protractor/bin/webdriver-manager start",
-    "tests": "node node_modules/protractor/bin/protractor conf.js --baseUrl=https://ssls.com/"
+    "start": "npm run test",
+    "pretest": "npm install",
+    "test": "npm run pretest && npm run protractor",
+    "protractor": "node node_modules/protractor/bin/protractor conf.js --baseUrl=https://ssls.com/"
   },
   "author": "paxa1887@gmail.com",
   "license": "ISC"

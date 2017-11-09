@@ -1,15 +1,13 @@
 let SpecReporter = require('jasmine-spec-reporter').SpecReporter;
 
 exports.config = {
-    seleniumAddress: 'http://localhost:4444/wd/hub',
-    allScriptsTimeout: 150000,
-    maxSessions: 1,
+    directConnect: true,
 
     capabilities: {
         browserName: 'chrome',
 
         chromeOptions: {
-            args: ["--headless", "--disable-gpu", "--window-size=800,600"]
+            args: ["--headless", "--disable-gpu"]
         }
     },
 
@@ -37,7 +35,6 @@ exports.config = {
             }
         }));
 
-        baseUrl: '';
         browser.manage().window().setSize(1920, 1080);
     }
 };
