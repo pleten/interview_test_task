@@ -1,0 +1,23 @@
+{
+  "output": "./output",
+  "helpers": {
+    "WebDriverIO": {
+      "url": "https://ssls.com",
+      "browser": "chrome",
+      "windowSize": "1365x768"
+    }
+  },
+  "include": {
+    "I": "./steps_file.js",
+    "homePage": "./pages/Home.js",
+    "loginPage": "./pages/Auth.js",
+    "profilePage": "./pages/Profile.js"
+  },
+  "mocha": {},
+  "bootstrap": false,
+  "teardown": null,
+  "hooks": [],
+  "tests": "./tests/*.e2e.js",
+  "timeout": 10000,
+  "name": "CodeceptJSTestProject"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "CodeceptJSWebdriverIOExampleProject",
+  "version": "1.0.0",
+  "scripts": {
+    "server": "selenium-standalone start",
+    "e2e": "codeceptjs run"
+  },
+  "devDependencies": {
+    "codeceptjs-webdriverio": "^1.1.0",
+    "faker": "^4.1.0"
+  }
+}
