@@ -11,9 +11,6 @@ Test https://ssls.com site functionality using Webdriver I/O and CodeceptJS in s
 npm install
 ```
 
-```
-[sudo] npm install -g protractor@^5.0.0
-```
 2. Install `selenium-standalone server`:
 ```
 [sudo] npm install selenium-standalone@latest -g
