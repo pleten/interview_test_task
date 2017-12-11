@@ -1,4 +1,4 @@
-# Protractor/CodeceptJS Example Project
+# CodeceptJS/WebdriverIO Example Project
 Test https://ssls.com site functionality using Webdriver I/O and CodeceptJS in style "from user's perspective" for demonstrative purposes 
 
 ## Prerequisites
