@@ -1,0 +1,4 @@
+# Shared between .npmignore and .gitignore
+.idea/
+node_modules/
+protractor/
