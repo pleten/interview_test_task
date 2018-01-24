@@ -45,14 +45,6 @@ Project architecture
 The folder "page" contains all pages which use for writing test cases (loginPage, homePage and profilePage)
 In these pages use locators and method PageObject
 
-* steps
-
-The folder "steps" currently contains one method for making screens
-
-* screens
-
-This folder will contain all screens
-
 Run Tests
 ---------
 
@@ -69,5 +61,35 @@ ex_spec.js (contains all tests according to documents of test-cases)
 In order to run tests you need to use "conf.js" file for example:
 
 ```
-protractor cong.js
+protractor conf.js
 ```
+
+Report
+------
+First off all we need to add [Allure](https://docs.qameta.io/allure/) to our system
+And add the following command
+
+```
+npm i jasmine-allure-reporter
+```
+
+In this project was added jasmine-allure report. The module of allure plugin can see in "conf.js"
+
+To get the report enough to start up tests
+
+```
+protractor conf.js
+```
+
+After executing tests we get the report "allure-results" with "xml" files
+Then to get report in locally, need to execute the following command
+
+```
+allure generate ./allure-results/
+```
+
+And we can get the next folder "allure-report"
+If we open "index.html" we will see this report
+
+
+![alt text](./1516792212682.jpg)

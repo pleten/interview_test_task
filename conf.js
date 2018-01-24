@@ -1,4 +1,31 @@
 exports.config = {
+  
+  framework: 'jasmine2',
+
+  onPrepare: function () {
+    var AllureReporter = require('jasmine-allure-reporter');
+    jasmine.getEnv().addReporter(new AllureReporter());
+    jasmine.getEnv().afterEach(function(done){
+      browser.takeScreenshot().then(function (png) {
+        allure.createAttachment('Screenshot', function () {
+          return new Buffer(png, 'base64')
+        }, 'image/png')();
+        done();
+      })
+    });
+  },
+
+
+  // beforeLaunch: function() {
+  //   return new Promise(function(resolve){
+  //     htmlScreenshoReporter.beforeLaunch(resolve);
+  //   });
+  // },
+  //
+  // onPrepare: function () {
+  //   jasmine.getEnv().addReporter(htmlScreenshoReporter);
+  // },
+  //
   directConnect: true,
 
   // Capabilities to be passed to the webdriver instance.
@@ -9,8 +36,8 @@ exports.config = {
     }
   },
 
-  // Framework to use. Jasmine is recommended.
-  framework: 'jasmine',
+  // Fraework to use. Jasmine is recommended.
+
 
   // Spec patterns are relative to the current working directory when
   // protractor is called.
@@ -19,7 +46,7 @@ exports.config = {
   // Options to be passed to Jasmine.
   jasmineNodeOpts: {
     showColors: true,
-    defaultTimeoutInterval: 20000,
+    defaultTimeoutInterval: 30000,
     isVerbose: true
   }
   
