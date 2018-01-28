@@ -1,0 +1,11 @@
+# installed npm dependencies
+node_modules/
+.idea/
+built/
+# compiled js and debug files
+*.js.map
+*.js !setup-grid.js
+# test run results
+allure-report/
+allure-results/
+package-lock.json

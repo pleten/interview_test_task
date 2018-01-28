@@ -1,0 +1,22 @@
+{
+    "name": "interview_test_task",
+    "version": "1.0.0",
+    "repository": "https://github.com/pleten/interview_test_task",
+    "scripts": {
+        "postinstall": "node_modules/.bin/webdriver-manager update && npm run tsc",
+        "pretest": "npm run tslint",
+        "test": "protractor ./built/config/protractor.conf.js",
+        "tsc": "tsc",
+        "tslint": "tslint -e './node_modules/' -p ./tsconfig.json"
+    },
+    "dependencies": {
+        "protractor": "^5.2.0",
+        "jasmine-spec-reporter": "^4.2.1",
+        "jasmine-allure-reporter": "^1.0.2",
+        "@types/jasmine": "^2.8.5",
+        "@types/jasmine-expect": "^3.8.1",
+        "protractor-element-extend": "2.0.1",
+        "typescript": "^2.6.0",
+        "tslint": "5.0.0"
+    }
+}
