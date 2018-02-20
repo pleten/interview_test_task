@@ -1,0 +1,22 @@
+{
+  "name": "test-task",
+  "version": "0.0.0",
+  "scripts": {
+    "postinstall": "webdriver-manager update",
+    "test": "protractor ./protractor.conf.js"
+  },
+  "private": false,
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jasmine": "2.8.6",
+    "@types/jasminewd2": "2.0.3",
+    "@types/node": "9.4.6",
+    "@types/request-promise": "4.1.41",
+    "jasmine-core": "2.99.1",
+    "jasmine-spec-reporter": "4.2.1",
+    "protractor": "5.3.0",
+    "ts-node": "4.1.0",
+    "tslint": "5.9.1",
+    "typescript": "2.7.2"
+  }
+}
