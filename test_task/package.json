@@ -1,0 +1,28 @@
+{
+  "name": "test-task",
+  "version": "1.0.0",
+  "description": "test task",
+  "main": "protractor.conf.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "bottlejs": "^1.6.2",
+    "jasmine-spec-reporter": "^2.7.0",
+    "lodash": "^4.17.10",
+    "protractor": "^5.2.0",
+    "protractor-jasmine2-html-reporter": "0.0.6"
+  },
+  "devDependencies": {
+    "sg-protractor-tools": "^1.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pleten/interview_test_task.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Nikolay Ponorets",
+  "license": "ISC"
+}
