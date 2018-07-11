@@ -1,8 +1,24 @@
-## Repository description:
+# SSLS Test
 
-This repository is for uploading results of the completed test task.
+### Install dependencies
+```
+npm install
+```
 
-- You should create new project from a scratch. Project could be developed with any programming language and any framework you want.
-- Project should be in the new branch. 
-- Create new Pull Request when task will be finished.
-- Project should contain covered test cases that are described in task document and contain instructions how to build and run your project.
+### Start webdriver
+```
+./node_modules/.bin/webdriver-manager update
+./node_modules/.bin/webdriver-manager start
+```
+
+### Running the tests
+```
+npm run test
+```
+
+### Open Allure report
+```
+npm run report
+```
+
+
