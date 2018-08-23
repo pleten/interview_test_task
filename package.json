@@ -1,0 +1,14 @@
+{
+  "name": "ssls-test-suite",
+  "version": "0.0.1",
+  "dependencies": {
+    "protractor": "^5.1.2",
+    "chai": "^4.1.1",
+    "chai-sorted": "^0.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "run"
+  },
+  "author": ""
+}

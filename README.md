@@ -1,8 +1,13 @@
-## Repository description:
+To Execute tests you should do the following steps:
 
-This repository is for uploading results of the completed test task.
+1. Download and install Chrome browser v 65 and above
 
-- You should create new project from a scratch. Project could be developed with any programming language and any framework you want.
-- Project should be in the new branch. 
-- Create new Pull Request when task will be finished.
-- Project should contain covered test cases that are described in task document and contain instructions how to build and run your project.
+2. Install java v 1.8.0 and above
+
+3. Install node v 8.9.0 and above
+
+4. Navigate to root directory and execute ```npm install``` command to resolve dependencies
+
+5. Run ```webdriver-manager update && webdriver-manager start```
+
+6. Open new terminal window and run ```protractor conf.js```
