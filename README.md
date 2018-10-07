@@ -1,8 +1,48 @@
-## Repository description:
+Getting Started
+---------------
 
-This repository is for uploading results of the completed test task.
+To get set up and running quickly:
 
-- You should create new project from a scratch. Project could be developed with any programming language and any framework you want.
-- Project should be in the new branch. 
-- Create new Pull Request when task will be finished.
-- Project should contain covered test cases that are described in task document and contain instructions how to build and run your project.
+```
+apt-get install nodejs
+```
+
+```
+install npm
+```
+
+```
+npm install -g protractor
+```
+```
+webdriver-manager update
+```
+```
+webdriver-manager update
+```
+Then you can start up server the following command:
+```
+webdriver-manager start
+```
+
+Then open the new terminal and run:
+- for all tests:
+```
+protractor configuration.js
+```
+- for Login page tests:
+```
+protractor configuration.js --suite login
+```
+- for Header page tests:
+```
+protractor configuration.js --suite header
+```
+- for Profile page tests:
+```
+protractor configuration.js --suite profile
+```
+- for Home page tests:
+```
+protractor configuration.js --suite home
+```
