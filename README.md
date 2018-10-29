@@ -1,8 +1,23 @@
 ## Repository description:
 
-This repository is for uploading results of the completed test task.
-
-- You should create new project from a scratch. Project could be developed with any programming language and any framework you want.
-- Project should be in the new branch. 
-- Create new Pull Request when task will be finished.
-- Project should contain covered test cases that are described in task document and contain instructions how to build and run your project.
+# Instruction:
+1. **Download source code**
+    ```
+    git clone https://github.com/youRooock/interview_test_task.git
+    ```
+2. **Resolve dependencies** 
+    ```
+    npm install
+    ```
+3. **Build typescript project**
+    ```
+    npm run build
+    ```
+4. **Run tests**
+    ```
+    npm run test
+    ```
+5. **Generate report (_will be created in the project directory and automatically opened_)**
+    ```
+    npm run report
+    ```

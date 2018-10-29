@@ -1,0 +1,30 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "mocha dist/tests/*.js --timeout=60000 -R mocha-allure-reporter",
+    "lint": "tslint -p .\\tsconfig.json -c .\\tslint.json",
+    "report": "allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "allure-commandline": "^2.7.0",
+    "chromedriver": "^2.43.1",
+    "mocha-allure-reporter": "^1.4.0",
+    "typescript": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.5",
+    "@types/chromedriver": "^2.38.0",
+    "@types/mocha": "^2.2.44",
+    "@types/selenium-webdriver": "^3.0.12",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.0"
+  }
+}
