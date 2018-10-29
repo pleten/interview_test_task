@@ -1,0 +1,16 @@
+{
+  "name": "ssls_e2e_tests",
+  "version": "0.0.1",
+  "scripts": {
+    "prepare": "node_modules/.bin/webdriver-manager update",
+    "pretest": "rm -rf allure-report",
+    "test": "protractor conf.js",
+    "posttest": "allure generate allure-results --clean -o allure-report || true"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.7.0",
+    "jasmine-allure-reporter": "^1.0.2",
+    "lodash.isequal": "^4.5.0",
+    "protractor": "^5.4.1"
+  }
+}
