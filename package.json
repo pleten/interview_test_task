@@ -1,0 +1,25 @@
+{
+  "name": "interview_test_task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "conf.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "e2e": "protractor conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustKas/interview_test_task.git"
+  },
+  "author": "Aleksandr Kasianov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JustKas/interview_test_task/issues"
+  },
+  "homepage": "https://github.com/JustKas/interview_test_task#readme",
+  "dependencies": {
+    "protractor": "^5.4.1"
+  }
+}
