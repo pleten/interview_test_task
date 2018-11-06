@@ -1,0 +1,19 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "declaration": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "./js",
+        "target": "es6"
+    },
+    "include": [
+        "./**/*.ts"
+    ],
+    "exclude": [
+        "./js/**/*"
+    ]
+}

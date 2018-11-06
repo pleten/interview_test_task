@@ -1,0 +1,20 @@
+{
+  "name": "protractor_test_task_lopka",
+  "version": "0.0.1",
+  "author": "Sergii Lopka",
+  "scripts": {
+    "tsc": "tsc",
+    "postinstall": "./node_modules/protractor/bin/webdriver-manager update && npm run tsc && protractor ./js/conf.js"
+  },
+  "description": "Test Task",
+  "main": "./conf.ts",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jasmine": ">=2.8.9",
+    "@types/node": ">=10.12.2",
+    "@types/jasminewd2": "^2.0.0",
+    "jasmine": ">=3.3.0",
+    "protractor": ">=5.4.1",
+    "typescript": "~3.1.6"
+  }
+}
