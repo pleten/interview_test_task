@@ -15,6 +15,7 @@
     "@types/jasminewd2": "^2.0.0",
     "jasmine": ">=3.3.0",
     "protractor": ">=5.4.1",
-    "typescript": "~3.1.6"
+    "typescript": "~3.1.6",
+    "jasmine-data-provider": ">=2.2.0"
   }
 }
