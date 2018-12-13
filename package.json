@@ -1,0 +1,35 @@
+{
+  "name": "zone3000",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pleten/interview_test_task.git"
+  },
+  "keywords": [
+    "protractor"
+  ],
+  "author": "Dimitry Rudakov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pleten/interview_test_task/issues"
+  },
+  "homepage": "https://github.com/pleten/interview_test_task#readme",
+  "dependencies": {
+    "chromedriver": "^2.44.1",
+    "jasmine": "^3.3.1",
+    "selenium-webdriver": "3.6.0"
+  },
+  "devDependencies": {
+    "dateformat": "1.0.12",
+    "protractor": "^5.4.1",
+    "jasmine-reporters": "2.0.8",
+    "jasmine-spec-reporter": "2.3.0",
+    "eslint": "3.9.1",
+    "eslint-plugin-protractor": "^1.41.0"
+  },
+  "scripts": {
+    "test": "node --max_old_space_size=4096 node_modules/protractor/built/cli.js conf.js --suite=full"
+  }
+}
