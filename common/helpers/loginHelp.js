@@ -1,20 +1,29 @@
 const loginPage = require('../../common/pages/login_page.js');
-const connections = require('../connections.json');
+const connections = require('../../connections.json');
+const EC = protractor.ExpectedConditions;
 
 module.exports = {
 
+    login: async function (email, password) {
 
-    login: function (login, password){
-        browser.waitForAngular(true);
+        let loginPage = new loginPage();
+        email = connections.credentials.admin.login;
+        password = connections.credentials.admin.password;
+        await loginPage.loginButton.click();
+        await loginPage.nameField.sendKeys(email);
+        await loginPage.passwordField.sendKeys(password);
+        await loginPage.submit.click();
+        browser.wait(EC.elementToBeClickable(loginPage.userDropDownButton), 4000);
 
-        const timeout = 20;//sec
-        const loginPage = new loginPage();
-        loginPage.get();
-        loginPage.login(login, password);
+    },
 
-        const mainPage = new MainPage();
-        expect(mainPage.userButton.getText()).toBe(connections.username, 'login failed');
+    logout:  async function () {
 
+        let loginPage = new loginPage();
+        if (await loginPage.userDropDownButton.isPresent()) {
+            await loginPage.userDropDownButton.click();
+            await loginPage.logoutButton.click();
 
+        }
     }
-}
+};
