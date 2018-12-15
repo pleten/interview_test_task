@@ -1,16 +1,46 @@
 class MainPage {
 
-    constructor() {
-        browser.ignoreSynchronization = false;
+    constructor(path = '/') {
+        this.path = path;
     }
 
-    get viewProfileButton() {
-        return $('a[ui-sref="user.profile"]');
+    get loginButton() {
+        return $('.log-box');
     }
 
-    get supportPinValue() {
-        const supportPinValueElement = element(by.xpath('//span[contains(text(),"Support pin")]/following::div[@class="description"]/span[@class="text ng-binding"]'));
-        return supportPinValueElement.getText();
+    get userButton() {
+        return $('.btn.user-btn');
     }
+
+    get userMenu() {
+
+        return new class UserMenu {
+
+            get _wrapper() {
+                return $('.dropdown.ng-isolate-scope');
+            }
+
+            get profileButton() {
+                return this._wrapper.$('a[ui-sref="user.profile"]');
+            }
+
+            get userDropDownButton() {
+                return $('.dropdown-btn');
+            }
+
+            get logoutButton() {
+                return $('.drop-button');
+            }
+        };
+    }
+
+
+
+    async open() {
+        await browser.get(this.path, 15000);
+    }
+
 }
+
 module.exports = MainPage;
+

@@ -1,15 +1,11 @@
-const MainPage = require('common/pages/main_page.js');
-const LoginPage = require('../../common/pages/login_page.js');
-const connections = require('../../connections.json');
-const EC = protractor.ExpectedConditions;
+const MainPage = require('../../common/pages/main_page.js');
 
 module.exports = {
 
-    selectProfile: async function () {
-        const loginPage = new LoginPage();
+    goToUserProfile: async function () {
         const mainPage = new MainPage();
-        await loginPage.userDropDownButton.click();
-        await mainPage.viewProfileButton.click();
+        await mainPage.userMenu.userDropDownButton.click();
+        await mainPage.userMenu.profileButton.click();
     },
 
 

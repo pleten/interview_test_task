@@ -2,19 +2,13 @@
 // "use strict";
 const HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
 const JUnitXmlReporter = require('protractor-html-reporter-2');
-
 const env = require('./environment.js');
-const _ = require('lodash');
 const dateFormat = require('dateformat');
 const SpecReporter = require('jasmine-spec-reporter');
-// const loggerHelp = require('./common/helpers/logger_helpers.js');
-//const webRep = require('./common/helpers/slack_reporter_helper.js');
 
 exports.config = {
 
     SELENIUM_PROMISE_MANAGER: false,
-
-    params: {},
 
     baseUrl: 'https://www.ssls.com/',
 
@@ -68,25 +62,11 @@ exports.config = {
 
     capabilities: {
 
-        /**
-         * If this is set to be true, specs will be sharded by file (i.e. all
-         * files to be run by this set of capabilities will run in parallel).
-         * Default is false.
-         */
-        shardTestFiles: env.connections.browserOptions.shardTestFiles,
-
-        /**
-         * Maximum number of browser instances that can run in parallel for this
-         * set of capabilities. This is only needed if shardTestFiles is true.
-         * Default is 1.
-         */
-        maxInstances: env.connections.browserOptions.maxInstances,
-
         browserName: 'chrome',
 
         acceptInsecureCerts: true,
 
-        //Seting for selenoid if required
+        //Settings for selenoid if required
         enableVideo: true,
 
         enableVNC: true,

@@ -1,28 +1,34 @@
-const loginPage = require('../../common/pages/login_page.js');
+const LoginPage = require('../../common/pages/login_page.js');
+const MainPage = require('../../common/pages/main_page.js');
 const connections = require('../../connections.json');
 const EC = protractor.ExpectedConditions;
 
 module.exports = {
 
-    login: async function (email, password) {
+    login: async function (
+        email = connections.credentials.admin.login,
+        password = connections.credentials.admin.password
+    ) {
 
-        let loginPage = new loginPage();
-        email = connections.credentials.admin.login;
-        password = connections.credentials.admin.password;
-        await loginPage.loginButton.click();
-        await loginPage.nameField.sendKeys(email);
-        await loginPage.passwordField.sendKeys(password);
-        await loginPage.submit.click();
-        browser.wait(EC.elementToBeClickable(loginPage.userDropDownButton), 4000);
+        let mainPage = new MainPage();
+        let loginPage = new LoginPage();
+        this.email = email;
+        this.password = password;
+        await browser.wait(EC.elementToBeClickable(mainPage.loginButton), 10000);
+        await mainPage.loginButton.click();
+        await loginPage.nameField.sendKeys(this.email);
+        await loginPage.passwordField.sendKeys(this.password);
+        await loginPage.submitLoginButton.click();
+        browser.wait(EC.elementToBeClickable(mainPage.userMenu.userDropDownButton), 4000);
 
     },
 
     logout:  async function () {
 
-        let loginPage = new loginPage();
-        if (await loginPage.userDropDownButton.isPresent()) {
-            await loginPage.userDropDownButton.click();
-            await loginPage.logoutButton.click();
+        let mainPage = new MainPage();
+        if (await mainPage.userMenu.userDropDownButton.isPresent()) {
+            await mainPage.userMenu.userDropDownButton.click();
+            await mainPage.userMenu.logoutButton.click();
 
         }
     }

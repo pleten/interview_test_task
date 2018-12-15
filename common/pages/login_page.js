@@ -1,11 +1,7 @@
-'use strict';
 class LoginPage {
-    constructor() {
-        browser.ignoreSynchronization = false;
-    }
 
-    get userDropDownButton() {
-        return $('.dropdown-btn');
+    constructor(){
+
     }
 
     get nameField() {
@@ -24,40 +20,28 @@ class LoginPage {
         return $('.icon.icon-eye');
     }
 
-    get loginButton() {
-        return $('.btn.flat-dark.ng-scope');
-    }
-
-    get logoutButton() {
-        return $('.drop-button');
-    }
-
-    get submit() {
+    get submitLoginButton() {
         const submit = $$('[type="submit"]').first();
-        expect(submit.isPresent()).toBe(true, 'submit button is not presented');
+        expect(submit.isPresent()).toBe(true, 'submitLoginButton button is not presented');
         return submit;
     }
 
-    get userButton () {
-        return  $('.btn.user-btn');
-    }
-
-    get alert () {
+    get alert() {
         return $('.noty_text');
     }
 
-    get warning () {
+    get warning() {
         return $('.tooltip.tooltip-error');
     }
 
     get emailWarning() {
         return element.all(by.xpath('//div[@class="form-group email"]/descendant::span[@class="tooltip-text"]')).get(1);
     }
+
     get passwordWarning() {
         return element.all(by.xpath('//div[@class="form-group email"]/following::span[@class="tooltip-text"]')).first();
     }
-
 }
 
-
 module.exports = LoginPage;
+
