@@ -18,12 +18,12 @@ fdescribe('Test task', () => {
 
     afterEach(async () => {
         await loginHelper.logout();
-        await browser.refresh();
     });
 
     it('1. Authorization page (Welcome back!)', async () => {
 
         await mainPage.loginButton.click();
+        await browser.wait(EC.elementToBeClickable(loginPage.nameField), 10000);
         await loginPage.nameField.sendKeys(connections.credentials.admin.login);
         await loginPage.passwordField.sendKeys(connections.credentials.admin.password);
         await loginPage.eyeButton.click();
@@ -42,6 +42,7 @@ fdescribe('Test task', () => {
 
         await browser.wait(EC.elementToBeClickable(mainPage.loginButton), 10000);
         await mainPage.loginButton.click();
+        await browser.wait(EC.elementToBeClickable(loginPage.nameField), 10000);
         await loginPage.nameField.sendKeys('invalid@password.com');
         await loginPage.passwordField.sendKeys(connections.credentials.admin.password);
         await loginPage.eyeButton.click();
@@ -61,6 +62,7 @@ fdescribe('Test task', () => {
     it('3. Authorization page. Invalid email', async () => {
 
         await mainPage.loginButton.click();
+        await browser.wait(EC.elementToBeClickable(loginPage.nameField), 10000);
         await loginPage.nameField.sendKeys('ssls.automation+5@@gmail.com');
         await loginPage.passwordField.sendKeys(connections.credentials.admin.password);
         await loginPage.eyeButton.click();
@@ -78,6 +80,7 @@ fdescribe('Test task', () => {
     it('4. Authorization page. Empty fields', async () => {
 
         await mainPage.loginButton.click();
+        await browser.wait(EC.elementToBeClickable(loginPage.nameField), 10000);
         await loginPage.submitLoginButton.click();
         expect(browser.getCurrentUrl()).toEqual('https://www.ssls.com/authorize', 'Did not switched to the main page');
 
@@ -123,7 +126,7 @@ fdescribe('Test task', () => {
         expect(profilePage.getUserName()).toEqual(userName, 'email is not saved');
         expect(profilePage.getEmail()).toEqual(emailValue, 'email is not saved');
         expect(profilePage.getPassword()).not.toBe(null, 'email is not saved');
-        expect(profilePage.getPhone()).toEqual('Wrong phone number for screenshot presentation', 'email is not saved');
+        expect(profilePage.getPhone()).toEqual(phoneValue, 'email is not saved');
         expect(profilePage.getAddress()).toEqual(addressValue, 'email is not saved');
         expect(profilePage.getSupportPinValue()).toEqual(pinValue, 'email is not saved');
         expect(profilePage.getNewslettersToggleState()).toEqual(newslettersToggleState, 'email is not saved');
@@ -216,7 +219,6 @@ fdescribe('Test task', () => {
             arrayOfRatings.push(rateInt);
         });
         expect(isSortedDescending(arrayOfRatings)).toBe(true, 'Featured sort is not working correctly');
-
 
         // Cheapest sorting
         const cheapestButton = await element(by.cssContainingText('a', 'Cheapest'));

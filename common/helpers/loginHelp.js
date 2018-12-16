@@ -16,6 +16,7 @@ module.exports = {
         this.password = password;
         await browser.wait(EC.elementToBeClickable(mainPage.loginButton), 10000);
         await mainPage.loginButton.click();
+        await browser.wait(EC.elementToBeClickable(loginPage.nameField), 10000);
         await loginPage.nameField.sendKeys(this.email);
         await loginPage.passwordField.sendKeys(this.password);
         await loginPage.submitLoginButton.click();
@@ -29,6 +30,7 @@ module.exports = {
         if (await mainPage.userMenu.userDropDownButton.isPresent()) {
             await mainPage.userMenu.userDropDownButton.click();
             await mainPage.userMenu.logoutButton.click();
+            await  browser.sleep(2000, 'Logout awaiting was not fulfilled');
 
         }
     }
