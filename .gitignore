@@ -1,0 +1,23 @@
+# Temporary files
+*~*
+
+# WS configs
+.idea/
+
+# VS CODE configs
+.vscode/
+
+# npm dubug log
+# Selenium server debug log
+/debug.log
+/npm-dubug.log
+
+# local connections
+/connections.json
+
+# downloads
+/downloads/
+
+# node packages
+/node_modules/
+
