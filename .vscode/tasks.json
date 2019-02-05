@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "identifier": "setupNPM",
+            "type": "npm",
+            "script": "setup",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "echo": true,
+                "focus": false
+            }
+        }
+    ]
+}

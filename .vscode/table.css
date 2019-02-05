@@ -1,0 +1,42 @@
+/* table {
+    width: 100%;
+	table-layout: auto;
+}
+table, th, td {
+   border: 1px solid gray;
+}
+table th {
+    background-color: gray;
+}
+th{
+    font-weight: normal;
+} */
+
+table {
+    border: 3px solid black;
+    page-break-inside: avoid;
+}
+table th {
+    padding: .4rem;
+    background-color: #a9d269;
+    border: 1px solid #333333;
+    page-break-inside: avoid;
+}
+table td {
+    padding: .4rem;
+    border: 1px solid #333333;
+    page-break-inside: avoid;
+}
+table tr {
+    page-break-inside: avoid;
+}
+pre {
+    padding: .5rem;
+    border: 2px solid #a9d269;
+}
+.hljs-keyword {
+    font-weight: bold;
+}
+.hljs-variable {
+    font-weight: bold;
+}
