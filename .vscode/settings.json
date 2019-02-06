@@ -28,6 +28,10 @@
     "terminal.integrated.rendererType": "dom",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "cSpell.words": [
-        "SSLS"
+        "Dropdown",
+        "Ecommerce",
+        "SSLS",
+        "prefs",
+        "subdomains"
     ],
 }

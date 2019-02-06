@@ -1,10 +1,10 @@
-import { $, browser, protractor } from 'protractor';
+import { $, browser, ElementFinder, protractor } from 'protractor';
 
 export class SnackBar {
     private readonly errorSnackBar = $('.noty_type_error');
     private readonly infoSnackBar = $('.noty_type_information');
 
-    async tryGetErrorSnack() {
+    async tryGetErrorSnack(): Promise<string> {
         let snack = '';
         try {
             await this.waitForSnackBarEnabled(this.errorSnackBar);
@@ -13,7 +13,7 @@ export class SnackBar {
         return snack;
     }
 
-    async tryGetInfoSnack() {
+    async tryGetInfoSnack(): Promise<string> {
         let snack = '';
         try {
             await this.waitForSnackBarEnabled(this.infoSnackBar);
@@ -22,7 +22,7 @@ export class SnackBar {
         return snack;
     }
 
-    async waitForSnackBarEnabled(snackBar, timeOut = 3000) {
+    async waitForSnackBarEnabled(snackBar: ElementFinder, timeOut = 5000): Promise<void> {
         const EC = protractor.ExpectedConditions;
         await browser.wait(EC.presenceOf(snackBar), timeOut);
     }

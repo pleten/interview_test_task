@@ -1,3 +1,5 @@
+import { ElementFinder } from 'protractor';
+import { FilterType } from '../enums/filter.type';
 import { SortingType } from '../enums/sorting.type';
 import { Certificate } from '../models/certificate.model';
 import { HomePage } from '../page-objects/home.page';
@@ -6,15 +8,15 @@ import { ConsoleLog } from '../reporters/console.log';
 const homePage = new HomePage();
 
 export class CertificateController {
-    static async setFilter(filters) {
+    static async setFilter(filters: FilterType[]): Promise<void> {
         ConsoleLog.trace(`Set filters:`);
         console.log(filters);
-        return filters.forEach(async filter => {
+        return filters.forEach(async (filter: FilterType) => {
             await homePage.clickFilterButtonByName(filter);
         });
     }
 
-    static async setSorting(sortingType) {
+    static async setSorting(sortingType: SortingType): Promise<void> {
         ConsoleLog.trace(`Set sorting [${sortingType}] order.`);
         if (sortingType === SortingType.Cheapest) {
             try {
@@ -31,10 +33,10 @@ export class CertificateController {
         }
     }
 
-    static async getList() {
+    static async getList(): Promise<Certificate[]> {
         ConsoleLog.trace(`Get certificate list:`);
-        const certList = new Array();
-        await homePage.certificateList.each(async (certElement, index) => {
+        const certList = new Array<Certificate>();
+        await homePage.certificateList.each(async (certElement: ElementFinder, index: number) => {
             const cert = new Certificate();
             cert.name = await homePage.getCertNameFromCertElement(certElement);
             cert.rating = await homePage.getCertRatingFromCertElement(certElement);

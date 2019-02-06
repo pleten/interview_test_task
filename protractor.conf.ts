@@ -24,12 +24,10 @@ export let config: Config = {
                 },
             },
             args: [
-                '--start-maximized',
-                // '--disable-web-security',
-                // '--headless',
-                // '--window-size=1920,2160',
-                // '--disable-gpu',
-                // '--log-level=2',
+                // '--start-maximized',
+                '--headless',
+                '--window-size=1920,2160',
+                '--disable-gpu',
             ],
         },
     },
@@ -47,7 +45,6 @@ export let config: Config = {
         allureRuntime.writeEnvironmentInfo(await ConsoleLog.systemInfo());
         jasmine.getEnv().clearReporters();
         jasmine.getEnv().addReporter(allureReporter);
-
         jasmine.getEnv().addReporter(
             new SpecReporter({
                 customProcessors: [CustomProcessor],

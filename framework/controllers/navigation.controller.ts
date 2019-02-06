@@ -7,25 +7,30 @@ import { ConsoleLog } from '../reporters/console.log';
 
 const homePage = new HomePage();
 export class NavigationController {
-    static async login(loginProps: ILogin) {
+    static async login(loginProps: ILogin): Promise<ILogin> {
         await homePage.getInstance();
         await homePage.waitForLoginButtonToBeClickable();
         const loginPage = await homePage.clickLoginButton();
         ConsoleLog.trace(`Login as [${loginProps.user.email}] user using [${loginProps.user.password}] password.`);
+
         await loginPage.setEmail(loginProps.user.email);
         await loginPage.setPassword(loginProps.user.password);
         loginProps.emailValidationMessage = await loginPage.tryGetEmailValidationMessage();
         loginProps.passwordValidationMessage = await loginPage.tryGetPasswordValidationMessage();
         await loginPage.clickLoginButton();
-        loginProps.infoSnackBarMessage = await new SnackBar().tryGetInfoSnack();
-        loginProps.errorSnackBarMessage = await new SnackBar().tryGetErrorSnack();
+
+        if (await loginPage.isLoginButtonPresent()) {
+            loginProps.infoSnackBarMessage = await new SnackBar().tryGetInfoSnack();
+            loginProps.errorSnackBarMessage = await new SnackBar().tryGetErrorSnack();
+        }
+
         loginProps.isLoginSuccessful = await homePage.isUserProfileDropdownPresent();
         ConsoleLog.trace(`Login result:`);
         console.log(loginProps);
         return loginProps;
     }
 
-    static async logout() {
+    static async logout(): Promise<void> {
         ConsoleLog.trace(`Log out from the website.`);
         const userProfile: UserProfileDropdown = await homePage.openUserProfileDropdown();
         await userProfile.clickLogoutButton();
@@ -33,12 +38,12 @@ export class NavigationController {
         await this.clearBrowserCache();
     }
 
-    static async goToCertificates() {
+    static async goToCertificates(): Promise<void> {
         ConsoleLog.trace(`Go to certificates.`);
         await homePage.clickCertsButton();
     }
 
-    static async isUserLoggedIn() {
+    static async isUserLoggedIn(): Promise<boolean> {
         let isUserLoggedIn = false;
         try {
             isUserLoggedIn = (await homePage.getUserProfileName()).includes('@');
@@ -47,7 +52,7 @@ export class NavigationController {
         return isUserLoggedIn;
     }
 
-    static async clearBrowserCache() {
+    static async clearBrowserCache(): Promise<void> {
         ConsoleLog.warning(`Clear browser cache.`);
         await browser.executeScript('window.localStorage.clear();');
         await browser.executeScript('window.sessionStorage.clear();');

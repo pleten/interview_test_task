@@ -1,39 +1,47 @@
-import { by, element } from 'protractor';
+import { $, by, ElementArrayFinder, ElementFinder } from 'protractor';
 
 export class LoginPage {
-    private readonly loginPageBlock = element(by.css('.authorization-page'));
-    private readonly authForm = this.loginPageBlock.element(by.name('authForm'));
-    private readonly userEmailInput = this.authForm.element(by.model('form.email'));
-    private readonly userEmailTooltips = this.authForm.element(by.css('.form-group.email')).all(by.css('.left-tooltip-box'));
-    private readonly userPasswordTooltip = this.authForm
-        .element(by.css('.input-group'))
+    private readonly authForm: ElementFinder = $('.authorization-page').element(by.name('authForm'));
+    private readonly userEmailInput: ElementFinder = this.authForm.element(by.model('form.email'));
+    private readonly userEmailTooltips: ElementArrayFinder = this.authForm.$('.form-group.email').$$('.left-tooltip-box');
+    private readonly userPasswordTooltip: ElementFinder = this.authForm
+        .$('.input-group')
         .element(by.xpath('..'))
-        .element(by.css('.tooltip-error'));
-    private readonly userPasswordInput = this.authForm.element(by.model('form.password'));
-    private readonly loginButton = this.authForm.element(by.buttonText('Login'));
-    private readonly showPasswordButton = this.authForm.element(by.css('.icon-eye'));
+        .$('.tooltip-error');
+    private readonly userPasswordInput: ElementFinder = this.authForm.element(by.model('form.password'));
+    private readonly loginButton: ElementFinder = $('[name="authForm"]').$('[type="submit"]');
+    private readonly showPasswordButton: ElementFinder = this.authForm.$('.icon-eye');
 
-    async setEmail(userName) {
+    async setEmail(userName: string): Promise<void> {
         await this.userEmailInput.clear();
         await this.userEmailInput.sendKeys(userName);
     }
-    async setPassword(password) {
+    async setPassword(password: string): Promise<void> {
         await this.userPasswordInput.clear();
         await this.userPasswordInput.sendKeys(password);
     }
-    async getPassword() {
+
+    async getPassword(): Promise<string> {
         return this.userPasswordInput.getAttribute('value');
     }
-    async clickLoginButton() {
+
+    async clickLoginButton(): Promise<void> {
         await this.loginButton.click();
     }
-    async clickShowPasswordButton() {
+
+    async isLoginButtonPresent(): Promise<boolean> {
+        return  this.loginButton.isPresent();
+    }
+
+    async clickShowPasswordButton(): Promise<void> {
         await this.showPasswordButton.click();
     }
-    async isOpened() {
-        return this.loginPageBlock.isPresent();
+
+    async isOpened(): Promise<boolean> {
+        return this.authForm.isPresent();
     }
-    async tryGetEmailValidationMessage() {
+
+    async tryGetEmailValidationMessage(): Promise<string> {
         let message = '';
         try {
             message = await this.userEmailTooltips
@@ -46,7 +54,8 @@ export class LoginPage {
         } catch (error) {}
         return message;
     }
-    async tryGetPasswordValidationMessage() {
+
+    async tryGetPasswordValidationMessage(): Promise<string> {
         let message = '';
         try {
             message = await this.userPasswordTooltip.getText();

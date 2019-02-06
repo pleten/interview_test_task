@@ -6,9 +6,9 @@ import { Allure } from './allure';
 const defaultScreenshotsFolder = resolve('./test-results/screenshots');
 
 export class ScreenShot {
-    static async save(fileName: string, folder = defaultScreenshotsFolder) {
-        const screenshot = await browser.takeScreenshot();
-        const image = Buffer.from(screenshot, 'base64');
+    static async save(fileName: string, folder = defaultScreenshotsFolder): Promise<Buffer> {
+        const screenshot: string = await browser.takeScreenshot();
+        const image: Buffer = Buffer.from(screenshot, 'base64');
         if (!existsSync(folder)) {
             mkdirSync(folder);
         }

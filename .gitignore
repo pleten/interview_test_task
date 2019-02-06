@@ -1,6 +1,6 @@
 node_modules/
 tmp/
 test-results/
-
+.vscode/
 debug.log
 npm-debug.log

@@ -8,7 +8,7 @@ export const allureReporter = new JasmineAllureReporter(allureRuntime);
 export const allureInterface = allureReporter.getInterface();
 
 export class Allure {
-    static async attachScreenshot(attachmentName: string, content: Buffer) {
+    static async attachScreenshot(attachmentName: string, content: Buffer): Promise<void> {
         if (content === undefined) {
             content = Buffer.from(await browser.takeScreenshot(), 'base64');
         }
@@ -16,7 +16,7 @@ export class Allure {
         allureInterface.attachment(attachmentName, content, ContentType.PNG);
     }
 
-    static async attachJsonToAllure(attachmentName: string, json: any) {
+    static async attachJsonToAllure(attachmentName: string, json: any): Promise<void> {
         allureInterface.attachment(attachmentName, JSON.stringify(json), ContentType.JSON);
     }
 }

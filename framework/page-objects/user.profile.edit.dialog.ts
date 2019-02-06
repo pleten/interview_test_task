@@ -1,54 +1,68 @@
-import { $ } from 'protractor';
+import { $, ElementFinder } from 'protractor';
 
 export class UserProfileEditDialog {
-    async getName() {
-        return this.getRowText('Name');
+    private readonly userNamePropertyName = 'Name';
+    private readonly userEmailPropertyName = 'Email';
+    private readonly userPasswordPropertyName = 'Password';
+    private readonly userPhonePropertyName = 'Phone';
+    private readonly userAddressPropertyName = 'Address';
+    private readonly userSupportPinPropertyName = 'Support pin';
+    private readonly userNewsletterPinPropertyName = 'Newsletter';
+    private readonly userProfileCssSelector = '.profile-content';
+    private readonly rowCssSelector = '.item';
+    private readonly rowNameCssSelector = '.terms';
+    private readonly rowValueCssSelector = '.description';
+    private readonly rowButtonCssSelector = '.btn.square.flat-dark';
+    private readonly rowToggleButtonCssSelector = '.toggle-btn';
+
+    async getName(): Promise<string> {
+        return this.getRowText(this.userNamePropertyName);
     }
-    async getEmail() {
-        return this.getRowText('Email');
+    async getEmail(): Promise<string> {
+        return this.getRowText(this.userEmailPropertyName);
     }
-    async getPassword() {
-        return this.getRowText('Password');
+    async getPassword(): Promise<string> {
+        return this.getRowText(this.userPasswordPropertyName);
     }
-    async getPhone() {
-        return this.getRowText('Phone');
+    async getPhone(): Promise<string> {
+        return this.getRowText(this.userPhonePropertyName);
     }
-    async getAddress() {
-        return this.getRowText('Address');
+    async getAddress(): Promise<string> {
+        return this.getRowText(this.userAddressPropertyName);
     }
 
-    async getPin() {
-        return this.getRowText('Support pin');
+    async getPin(): Promise<string> {
+        return this.getRowText(this.userSupportPinPropertyName);
     }
 
-    async resetPin() {
-        return this.clickRowEditButton('Support pin');
+    async resetPin(): Promise<void> {
+        return this.clickRowEditButton(this.userSupportPinPropertyName);
     }
 
-    async getNewsletterSubscriptionStatus() {
-        const row = await this.getDataRowByName('Newsletter');
+    async getNewsletterSubscriptionStatus(): Promise<boolean> {
+        const row: ElementFinder = await this.getDataRowByName(this.userNewsletterPinPropertyName);
         return (await row
-            .$('.description')
-            .$('.toggle-btn')
+            .$(this.rowValueCssSelector)
+            .$(this.rowToggleButtonCssSelector)
             .getAttribute('class')).includes('on');
     }
 
-    async getDataRowByName(name) {
-        return $('.profile-content')
-            .$$('.item')
+    async getDataRowByName(name: string): Promise<ElementFinder> {
+        return $(this.userProfileCssSelector)
+            .$$(this.rowCssSelector)
             .filter(async item => {
-                return (await item.$('.terms').getText()).includes(name);
+                return (await item.$(this.rowNameCssSelector).getText()).includes(name);
             })
             .first();
     }
 
-    async getRowText(name) {
-        const row = await this.getDataRowByName(name);
-        return row.$('.description').getText();
+    async getRowText(name: string): Promise<string> {
+        const row: ElementFinder = await this.getDataRowByName(name);
+        return row.$(this.rowValueCssSelector).getText();
     }
 
-    async clickRowEditButton(name) {
-        const row = await this.getDataRowByName(name);
-        return row.$('.btn.square.flat-dark').click();
+    async clickRowEditButton(name: string): Promise<void> {
+        const row: ElementFinder = await this.getDataRowByName(name);
+        return row.$(this.rowButtonCssSelector).click();
     }
 }

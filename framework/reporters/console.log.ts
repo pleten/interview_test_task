@@ -3,7 +3,7 @@ import { Environment } from '../environment';
 
 const shift = '       ';
 export class ConsoleLog {
-    static async systemInfo() {
+    static async systemInfo(): Promise<{ baseUrl: string }> {
         console.log('\nTest Framework Configuration:'.yellow);
         console.log(`${shift}SSLS url - ` + `${Environment.baseUrl}`.green);
         console.log();
@@ -12,19 +12,19 @@ export class ConsoleLog {
         };
     }
 
-    static trace(text: string) {
+    static trace(text: string): void {
         console.log(ConsoleLog.addDateToString(text));
     }
 
-    static error(text: string) {
+    static error(text: string): void {
         this.trace(`ERROR: ${text}`.red);
     }
 
-    static warning(text: string) {
+    static warning(text: string): void {
         this.trace(`Warning: ${text}`.yellow);
     }
 
-    static withResult(text: string, isPassed: boolean) {
+    static withResult(text: string, isPassed: boolean): void {
         if (isPassed) {
             this.trace(`${text} PASS`.green);
         } else {
@@ -32,11 +32,11 @@ export class ConsoleLog {
         }
     }
 
-    static addDateToString(text: string) {
+    static addDateToString(text: string): string {
         return `${getCurrentDateTimeString()} ${text}`;
     }
 
-    static async browserConsoleErrors() {
+    static async browserConsoleErrors(): Promise<void> {
         const browserLogs = await browser
             .manage()
             .logs()
@@ -49,7 +49,7 @@ export class ConsoleLog {
     }
 }
 
-function getCurrentDateTimeString() {
+function getCurrentDateTimeString(): string {
     const now = new Date();
     return `[${now.toLocaleDateString()} ${now.toLocaleTimeString()}]`;
 }
