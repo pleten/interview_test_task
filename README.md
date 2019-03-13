@@ -1,8 +1,7 @@
-## Repository description:
-
-This repository is for uploading results of the completed test task.
-
-- You should create new project from a scratch. Project could be developed with any programming language and any framework you want.
-- Project should be in the new branch. 
-- Create new Pull Request when task will be finished.
-- Project should contain covered test cases that are described in task document and contain instructions how to build and run your project.
+1) Use npm to install Protractor globally with: **npm install -g protractor**
+2) Update and start:
+**webdriver-manager update**
+**webdriver-manager start**
+3) Go to *interview_test_task* folder in terminal
+4) Use **npm install** 
+5) Run tests with the following command: **protractor conf.js** (For running without headless mode comment "--headless" in capabilities in conf.js )

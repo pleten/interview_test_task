@@ -1,0 +1,16 @@
+{
+  "name": "interview_test_task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jasmine": "^3.3.9",
+    "@types/node": "^11.11.0",
+    "protractor": "^5.4.2"
+  }
+}
