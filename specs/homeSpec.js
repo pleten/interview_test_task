@@ -1,7 +1,7 @@
 var Home = require('../pages/homePage');
 var testData = require('../testData');
 
-describe('My Profile page', function () {
+describe('Home page', function () {
 
     var homePage;
 
@@ -10,7 +10,7 @@ describe('My Profile page', function () {
         await browser.get(testData.url);
     });
 
-    it('Client area', async function () {
+    it('Filters', async function () {
         var expCheapestPrices = [5.88,12.88,19.66,70.88,72.88]
         var expFeaturedItems = ["EssentialSSL", "PositiveSSL Wildcard", "EssentialSSL Wildcard", "PositiveSSL Multi-Domain", "PositiveSSL"]
         var expPersonalandMultiDomainItem = ["PositiveSSL Multi-Domain"]
