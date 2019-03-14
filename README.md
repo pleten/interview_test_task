@@ -1,8 +1,18 @@
-## Repository description:
+Yaroslav Apatiev interview test task
+=======================
 
-This repository is for uploading results of the completed test task.
+Installation
+------------
+- Install [Node.js](https://nodejs.org/download/release/v8.10.0/) **version 8.10.0** 
 
-- You should create new project from a scratch. Project could be developed with any programming language and any framework you want.
-- Project should be in the new branch. 
-- Create new Pull Request when task will be finished.
-- Project should contain covered test cases that are described in task document and contain instructions how to build and run your project.
+- Install [Chromedriver](http://chromedriver.chromium.org/getting-started)
+  **version 2.46.0**
+
+- Checkout project and run npm install
+
+Running tests 
+-------------------
+
+**Run in gitBush**
+
+`node runner.js`

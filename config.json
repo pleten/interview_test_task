@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "file": "./test/authorizationPageTest.test.js",
+      "timeout": 40000
+    },
+    {
+      "file": "./test/logOutTest.test.js",
+      "timeout": 40000
+    },
+    {
+      "file": "./test/myProfilePageClientArea.test.js",
+      "timeout": 40000
+    },
+    {
+      "file": "./test/myProfilePageRefreshSupportPin.test.js",
+      "timeout": 40000
+    },
+    {
+      "file": "./test/myProfilePageRefreshSupportPin.test.js",
+      "timeout": 40000
+    }
+  ]
+}

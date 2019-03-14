@@ -1,0 +1,25 @@
+{
+  "name": "interview_test_task",
+  "version": "1.0.0",
+  "description": "Yaroslav Apatiev interview test task",
+  "scripts": {
+    "test": "node_modules/.bin/mocha tests/myProfilePageClientArea.js --timeout 50000",
+    "runner": "node runner.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pleten/interview_test_task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pleten/interview_test_task/issues"
+  },
+  "homepage": "https://github.com/pleten/interview_test_task#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chromedriver": "^2.46.0",
+    "mocha": "^5.2.0",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
+}
