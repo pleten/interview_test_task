@@ -1,0 +1,10 @@
+.idea/
+node_modules/
+.allure
+report/
+.idea/
+.DS_Store
+yarn-debug.log*
+yarn-error.log*
+*.iml
+.env*

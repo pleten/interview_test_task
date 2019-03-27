@@ -1,0 +1,11 @@
+{
+  "presets": ["es2015"],
+  "plugins": [
+    "transform-decorators-legacy",
+    ["transform-runtime", {
+      "polyfill": false
+    }],
+    "transform-flow-strip-types",
+    "transform-class-properties"
+  ]
+}
