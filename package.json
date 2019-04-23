@@ -1,0 +1,27 @@
+{
+  "name": "interview_test_task",
+  "version": "1.0.0",
+  "description": "This repository is for uploading results of the completed test task.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:followzms/interview_test_task.git"
+  },
+  "author": "Maksym Zapisov",
+  "license": "ISC",
+  "dependencies": {
+    "protractor": "^5.4.2",
+    "jasmine-spec-reporter": "^4.2.1",
+    "protractor-beautiful-reporter": "^1.2.7"
+  },
+  "devDependencies": {
+    "@babel/register": "^7.4.0",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/core":"^7.4.3"
+  },
+  "scripts": {
+    "prepare": "node_modules/.bin/webdriver-manager update",
+    "update": "node_modules/.bin/webdriver-manager update",
+    "test": "node_modules/.bin/protractor conf.js"
+  }
+}
