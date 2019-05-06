@@ -8,6 +8,7 @@ public class LoginTest extends BaseTest {
 
     public void correctSignIn() throws Exception{
         loginPage.open();
+        loginPage.driverOpenWait();
         loginPage.clickLoginBtn();
         loginPage.checkTitle();
         loginPage.fillCorrectUserData();
@@ -17,6 +18,7 @@ public class LoginTest extends BaseTest {
 
     public void incorrectSignIn() throws Exception{
         loginPage.open();
+        loginPage.driverOpenWait();
         loginPage.clickLoginBtn();
         loginPage.checkTitle();
         loginPage.fillIncorrectUserData();
@@ -26,6 +28,7 @@ public class LoginTest extends BaseTest {
 
     public void unregisteredUser() throws Exception{
         loginPage.open();
+        loginPage.driverOpenWait();
         loginPage.clickLoginBtn();
         loginPage.checkTitle();
         loginPage.fillUnregisteredUserData();
@@ -35,6 +38,7 @@ public class LoginTest extends BaseTest {
 
     public void emptyField() throws Exception{
         loginPage.open();
+        loginPage.driverOpenWait();
         loginPage.clickLoginBtn();
         loginPage.checkTitle();
         loginPage.clickLogBtn();
@@ -44,6 +48,7 @@ public class LoginTest extends BaseTest {
 
     public void logOut() throws Exception{
         loginPage.open();
+        loginPage.driverOpenWait();
         loginPage.clickLoginBtn();
         loginPage.checkTitle();
         loginPage.fillCorrectUserData();

@@ -116,4 +116,9 @@ public class LoginPage extends BasePage {
         driver.get(ConfigProperties.getProperty("login.url"));
     }
 
+    public void driverOpenWait() {
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/div[4]/div[1]/a")));
+    }
+
 }

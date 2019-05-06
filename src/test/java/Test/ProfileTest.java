@@ -10,6 +10,7 @@ public class ProfileTest extends BaseTest {
 
     public void checkProfileData() throws Exception{
         loginPage.open();
+        loginPage.driverOpenWait();
         loginPage.clickLoginBtn();
         loginPage.checkTitle();
         loginPage.fillCorrectUserData();
@@ -29,6 +30,7 @@ public class ProfileTest extends BaseTest {
 
     public void checkChangeToggleBtn() throws Exception{
         loginPage.open();
+        loginPage.driverOpenWait();
         loginPage.clickLoginBtn();
         loginPage.checkTitle();
         loginPage.fillCorrectUserData();
