@@ -1,0 +1,22 @@
+{
+  "name": "demo_protractor_test_automation_framework",
+  "description": "Current framework has been created as suitable solution for presented demo task, and it reflects all main concepts and best practices of automation testing",
+  "version": "1.0.0",
+  "author": "Dmytro Klymenko",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmklymenko/dmytro_klymenko_interview_task_solution"
+  },
+  "dependencies": {
+    "@types/jasmine": "^3.3.12",
+    "@types/node": "^12.0.2",
+    "jasmine": "^3.4.0",
+    "jasminewd2": "^2.2.0",
+    "log4js": "^4.2.0",
+    "protractor": "^5.4.2",
+    "protractor-beautiful-reporter": "^1.2.7",
+    "typescript": "~2.0.3",
+    "webdriver-manager": "^12.1.4"
+  }
+}

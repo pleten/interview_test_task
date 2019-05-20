@@ -1,8 +1,44 @@
-## Repository description:
+# Protractor test automation framework
+## Installation flow
 
-This repository is for uploading results of the completed test task.
+* Install [NodeJS (the latest version).](https://nodejs.org/en/) Download appropriate package according to your operating system.
+* Download project locally from remote branch.
+* After installation of NodeJS, please, install typescript and protractor globally:
+```
+npm install typescript -g
+npm install protractor -g
+```
+Then you need to install all required packages. Open terminal and move to root folder of the downloaded project, then run following commands one by one.
+* Install required node modules:
+```
+npm install
+```
+* Start server. Open separate terminal and run:
+```
+webdriver-manager update
+```
+```
+webdriver-manager start
+```
+* Come back to the previous terminal (where you are in root folder of the project) and transpile TypeScript source code to JavaScript:
+```
+tsc
+```
+*  After that start runnign test:
+```
+cd out
+```
+```
+protractor protractor.conf.js
+```
+Now execution process has been started.
 
-- You should create new project from a scratch. Project could be developed with any programming language and any framework you want.
-- Project should be in the new branch. 
-- Create new Pull Request when task will be finished.
-- Project should contain covered test cases that are described in task document and contain instructions how to build and run your project.
+After test execution you can see report of current test run. Please go to Reports folder. In root folder you need to run:
+```
+cd out/Reports
+```
+
+Open file 'report.html' in browser.
+
+**Note:** if some test was failed, please, rerun test suite again because sometimes flaky tests happen.
+
