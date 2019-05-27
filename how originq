@@ -1,0 +1,400 @@
+[33mcommit ba9f2d4cd8dd11da8e67d02c922a81a6ccf15cf1[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Yevhen Skliarov <yevhen.skliarov@ua.akvelon.com>
+Date:   Mon May 27 10:32:54 2019 +0300
+
+    'fixes'
+
+[1mdiff --git a/.idea/workspace.xml b/.idea/workspace.xml[m
+[1mindex f3f45a3..507085e 100644[m
+[1m--- a/.idea/workspace.xml[m
+[1m+++ b/.idea/workspace.xml[m
+[36m@@ -3,9 +3,8 @@[m
+   <component name="ChangeListManager">[m
+     <list default="true" id="397dd3bd-e3fd-4f1a-8ef4-31a1549456d8" name="Default" comment="">[m
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />[m
+[31m-      <change beforePath="$PROJECT_DIR$/PageObjects/HomePage.js" afterPath="$PROJECT_DIR$/PageObjects/HomePage.js" />[m
+[31m-      <change beforePath="$PROJECT_DIR$/conf.js" afterPath="$PROJECT_DIR$/conf.js" />[m
+       <change beforePath="$PROJECT_DIR$/src/HomePage.spec.js" afterPath="$PROJECT_DIR$/src/HomePage.spec.js" />[m
+[32m+[m[32m      <change beforePath="$PROJECT_DIR$/src/LoginPage.spec.js" afterPath="$PROJECT_DIR$/src/LoginPage.spec.js" />[m
+     </list>[m
+     <ignored path="$PROJECT_DIR$/.tmp/" />[m
+     <ignored path="$PROJECT_DIR$/temp/" />[m
+[36m@@ -33,7 +32,7 @@[m
+         <entry file="file://$PROJECT_DIR$/conf.js">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+             <state relative-caret-position="187">[m
+[31m-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />[m
+[32m+[m[32m              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+[36m@@ -42,28 +41,28 @@[m
+       <file leaf-file-name="LoginPage.spec.js" pinned="false" current-in-tab="false">[m
+         <entry file="file://$PROJECT_DIR$/src/LoginPage.spec.js">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="-153">[m
+[31m-              <caret line="27" column="45" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />[m
+[32m+[m[32m            <state relative-caret-position="246">[m
+[32m+[m[32m              <caret line="45" column="42" lean-forward="true" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[31m-      <file leaf-file-name="MyProfile.spec.js" pinned="false" current-in-tab="true">[m
+[32m+[m[32m      <file leaf-file-name="MyProfile.spec.js" pinned="false" current-in-tab="false">[m
+         <entry file="file://$PROJECT_DIR$/src/MyProfile.spec.js">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="-122">[m
+[32m+[m[32m            <state relative-caret-position="51">[m
+               <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+         </entry>[m
+       </file>[m
+[31m-      <file leaf-file-name="HomePage.spec.js" pinned="false" current-in-tab="false">[m
+[32m+[m[32m      <file leaf-file-name="HomePage.spec.js" pinned="false" current-in-tab="true">[m
+         <entry file="file://$PROJECT_DIR$/src/HomePage.spec.js">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="816">[m
+[31m-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />[m
+[32m+[m[32m            <state relative-caret-position="453">[m
+[32m+[m[32m              <caret line="53" column="17" lean-forward="true" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+[36m@@ -72,8 +71,8 @@[m
+       <file leaf-file-name="HomePage.js" pinned="false" current-in-tab="false">[m
+         <entry file="file://$PROJECT_DIR$/PageObjects/HomePage.js">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="9">[m
+[31m-              <caret line="20" column="55" lean-forward="true" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />[m
+[32m+[m[32m            <state relative-caret-position="348">[m
+[32m+[m[32m              <caret line="37" column="62" lean-forward="false" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="62" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+[36m@@ -82,8 +81,8 @@[m
+       <file leaf-file-name="BasePage.js" pinned="false" current-in-tab="false">[m
+         <entry file="file://$PROJECT_DIR$/PageObjects/BasePage.js">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="408">[m
+[31m-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />[m
+[32m+[m[32m            <state relative-caret-position="374">[m
+[32m+[m[32m              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+[36m@@ -112,8 +111,8 @@[m
+       <file leaf-file-name="LoginPage.js" pinned="false" current-in-tab="false">[m
+         <entry file="file://$PROJECT_DIR$/PageObjects/LoginPage.js">[m
+           <provider selected="true" editor-type-id="text-editor">[m
+[31m-            <state relative-caret-position="255">[m
+[31m-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />[m
+[32m+[m[32m            <state relative-caret-position="416">[m
+[32m+[m[32m              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />[m
+               <folding />[m
+             </state>[m
+           </provider>[m
+[36m@@ -137,13 +136,13 @@[m
+         <option value="$PROJECT_DIR$/.babelrc" />[m
+         <option value="$PROJECT_DIR$/spec.js" />[m
+         <option value="$PROJECT_DIR$/LoginPage.spec.js" />[m
+[31m-        <option value="$PROJECT_DIR$/src/LoginPage.spec.js" />[m
+         <option value="$PROJECT_DIR$/PageObjects/LoginPage.js" />[m
+         <option value="$PROJECT_DIR$/PageObjects/MyProfilePage.js" />[m
+         <option value="$PROJECT_DIR$/src/MyProfile.spec.js" />[m
+         <option value="$PROJECT_DIR$/PageObjects/BasePage.js" />[m
+         <option value="$PROJECT_DIR$/conf.js" />[m
+         <option value="$PROJECT_DIR$/PageObjects/HomePage.js" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/src/LoginPage.spec.js" />[m
+         <option value="$PROJECT_DIR$/src/HomePage.spec.js" />[m
+       </list>[m
+     </option>[m
+[36m@@ -198,6 +197,7 @@[m
+     </navigator>[m
+     <panes>[m
+       <pane id="Scratches" />[m
+[32m+[m[32m      <pane id="Scope" />[m
+       <pane id="ProjectPane">[m
+         <subPane>[m
+           <expand>[m
+[36m@@ -219,7 +219,6 @@[m
+           <select />[m
+         </subPane>[m
+       </pane>[m
+[31m-      <pane id="Scope" />[m
+     </panes>[m
+   </component>[m
+   <component name="PropertiesComponent">[m
+[36m@@ -261,25 +260,26 @@[m
+       <option name="presentableId" value="Default" />[m
+       <updated>1558592899547</updated>[m
+       <workItem from="1558592901067" duration="19109000" />[m
+[31m-      <workItem from="1558618750343" duration="12170000" />[m
+[32m+[m[32m      <workItem from="1558618750343" duration="12295000" />[m
+[32m+[m[32m      <workItem from="1558940390498" duration="1930000" />[m
+     </task>[m
+     <servers />[m
+   </component>[m
+   <component name="TimeTrackingManager">[m
+[31m-    <option name="totallyTimeSpent" value="31279000" />[m
+[32m+[m[32m    <option name="totallyTimeSpent" value="33334000" />[m
+   </component>[m
+   <component name="ToolWindowManager">[m
+     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />[m
+     <layout>[m
+[31m-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.8072488" order="0" side_tool="false" content_ui="combo" />[m
+[32m+[m[32m      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.7977346" order="0" side_tool="false" content_ui="combo" />[m
+       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />[m
+       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+[31m-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.19275123" order="2" side_tool="true" content_ui="tabs" />[m
+[31m-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.20226537" order="2" side_tool="true" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+[31m-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />[m
+       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />[m
+[36m@@ -302,6 +302,86 @@[m
+     <watches-manager />[m
+   </component>[m
+   <component name="editorHistoryManager">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/package.json">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state relative-caret-position="391">[m
+[32m+[m[32m          <caret line="23" column="32" lean-forward="false" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/conf.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state relative-caret-position="187">[m
+[32m+[m[32m          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/src/LoginPage.spec.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state relative-caret-position="459">[m
+[32m+[m[32m          <caret line="27" column="45" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/src/MyProfile.spec.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state relative-caret-position="51">[m
+[32m+[m[32m          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/src/HomePage.spec.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state relative-caret-position="816">[m
+[32m+[m[32m          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/PageObjects/BasePage.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state relative-caret-position="408">[m
+[32m+[m[32m          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/PageObjects/MyProfilePage.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state relative-caret-position="306">[m
+[32m+[m[32m          <caret line="18" column="63" lean-forward="false" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/package-lock.json">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state relative-caret-position="0">[m
+[32m+[m[32m          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/PageObjects/LoginPage.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state relative-caret-position="425">[m
+[32m+[m[32m          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/PageObjects/HomePage.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state relative-caret-position="646">[m
+[32m+[m[32m          <caret line="38" column="49" lean-forward="true" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+     <entry file="file://$PROJECT_DIR$/package.json">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state relative-caret-position="391">[m
+[36m@@ -408,63 +488,63 @@[m
+     <entry file="file://$PROJECT_DIR$/conf.js">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+         <state relative-caret-position="187">[m
+[31m-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />[m
+[32m+[m[32m          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+     <entry file="file://$PROJECT_DIR$/PageObjects/BasePage.js">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="408">[m
+[31m-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />[m
+[32m+[m[32m        <state relative-caret-position="374">[m
+[32m+[m[32m          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/PageObjects/LoginPage.js">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/PageObjects/MyProfilePage.js">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="255">[m
+[31m-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />[m
+[32m+[m[32m        <state relative-caret-position="306">[m
+[32m+[m[32m          <caret line="18" column="63" lean-forward="false" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/PageObjects/MyProfilePage.js">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/src/MyProfile.spec.js">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="306">[m
+[31m-          <caret line="18" column="63" lean-forward="false" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />[m
+[32m+[m[32m        <state relative-caret-position="51">[m
+[32m+[m[32m          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/PageObjects/HomePage.js">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/PageObjects/LoginPage.js">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="9">[m
+[31m-          <caret line="20" column="55" lean-forward="true" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />[m
+[32m+[m[32m        <state relative-caret-position="416">[m
+[32m+[m[32m          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/src/HomePage.spec.js">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/PageObjects/HomePage.js">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="816">[m
+[31m-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />[m
+[32m+[m[32m        <state relative-caret-position="348">[m
+[32m+[m[32m          <caret line="37" column="62" lean-forward="false" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="62" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+     <entry file="file://$PROJECT_DIR$/src/LoginPage.spec.js">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="-153">[m
+[31m-          <caret line="27" column="45" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />[m
+[32m+[m[32m        <state relative-caret-position="246">[m
+[32m+[m[32m          <caret line="45" column="42" lean-forward="true" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/src/MyProfile.spec.js">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/src/HomePage.spec.js">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state relative-caret-position="-122">[m
+[31m-          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />[m
+[32m+[m[32m        <state relative-caret-position="453">[m
+[32m+[m[32m          <caret line="53" column="17" lean-forward="true" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+[1mdiff --git a/src/HomePage.spec.js b/src/HomePage.spec.js[m
+[1mindex 20eb829..e3e3736 100644[m
+[1m--- a/src/HomePage.spec.js[m
+[1m+++ b/src/HomePage.spec.js[m
+[36m@@ -18,11 +18,18 @@[m [mdescribe('Home page. filters', () => {[m
+     await home.waitForElementVisibility(home.personal);[m
+     home.personal.click();[m
+     await home.scrollTo(home.filterResult);[m
+[31m-    let expected = await home.checkFilterResult(home.filterResult, home.sslItem, [[m
+[32m+[m[32m    let expectedFilterResult = await home.checkFilterResult(home.filterResult, home.sslItem, [[m
+       'Domain validation'[m
+     ]);[m
+[31m-    expect(expected).toEqual(true);[m
+[32m+[m[32m    //check filter results[m
+[32m+[m[32m    expect(expectedFilterResult).toEqual(true);[m
+     home.personal.click();[m
+[32m+[m[32m    await home.scrollTo(home.filterResult);[m
+[32m+[m[32m    let expectedFilterReset = await home.checkFilterResult(home.filterResult, home.sslItem, [[m
+[32m+[m[32m      'Domain validation'[m
+[32m+[m[32m    ]);[m
+[32m+[m[32m    //check filter reset[m
+[32m+[m[32m    expect(expectedFilterReset).toEqual(false);[m
+   });[m
+ [m
+   it('"Business" and “One domain” filters', async () => {[m
+[36m@@ -30,13 +37,25 @@[m [mdescribe('Home page. filters', () => {[m
+     home.business.click();[m
+     home.oneDomain.click();[m
+     await home.scrollTo(home.filterResult);[m
+[31m-    let expected = await home.checkFilterResult([m
+[32m+[m[32m    let expectedFilterResult = await home.checkFilterResult([m
+[32m+[m[32m      home.filterResult,[m
+[32m+[m[32m      home.sslItem,[m
+[32m+[m[32m      '1 domain',[m
+[32m+[m[32m      'Organization validation'[m
+[32m+[m[32m    );[m
+[32m+[m[32m    //check filter results[m
+[32m+[m[32m    expect(expectedFilterResult).toEqual(true);[m
+[32m+[m[32m    home.business.click();[m
+[32m+[m[32m    home.oneDomain.click();[m
+[32m+[m[32m    await home.scrollTo(home.filterResult);[m
+[32m+[m[32m    let expectedFilterReset = await home.checkFilterResult([m
+       home.filterResult,[m
+       home.sslItem,[m
+       '1 domain',[m
+       'Organization validation'[m
+     );[m
+[31m-    expect(expected).toEqual(true);[m
+[32m+[m[32m    //check filter reset[m
+[32m+[m[32m    expect(expectedFilterReset).toEqual(false);[m
+   });[m
+ [m
+   it('Cheapest/Featured', async () => {[m
+[1mdiff --git a/src/LoginPage.spec.js b/src/LoginPage.spec.js[m
+[1mindex f358baa..10df678 100644[m
+[1m--- a/src/LoginPage.spec.js[m
+[1m+++ b/src/LoginPage.spec.js[m
+[36m@@ -48,7 +48,7 @@[m [mdescribe('Authorization page', () => {[m
+   });[m
+ [m
+   it('Log Out.', async () => {[m
+[31m-    login.fillInlogInForm('ssls.automation+5@gmail.com', '123456')[m
+[32m+[m[32m    login.fillInlogInForm('ssls.automation+5@gmail.com', '123456');[m
+     login.clickLogInButton();[m
+     login.logOut();[m
+     await login.waitForElementVisibility(login.logInButton);[m
