@@ -1,0 +1,49 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1560757225891' stop='1560757326610'>
+    <name>My Profile</name>
+    <title>My Profile</title>
+    <test-cases>
+        <test-case start='1560757225891' status='passed' stop='1560757271524'>
+            <name>6 - My profile page. Client area</name>
+            <title>6 - My profile page. Client area</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-3'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1560757225892' status='passed' stop='1560757255542'>
+                    <name>"before each" hook</name>
+                    <title>"before each" hook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1560757271570' status='passed' stop='1560757326555'>
+            <name>7 - My profile page. Refresh support pin</name>
+            <title>7 - My profile page. Refresh support pin</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-3'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1560757271571' status='passed' stop='1560757308811'>
+                    <name>"before each" hook</name>
+                    <title>"before each" hook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

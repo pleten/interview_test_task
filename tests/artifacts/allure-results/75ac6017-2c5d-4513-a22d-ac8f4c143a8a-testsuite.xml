@@ -1,0 +1,91 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1560757181266' stop='1560757203914'>
+    <name>Authorization</name>
+    <title>Authorization</title>
+    <test-cases>
+        <test-case start='1560757181266' status='passed' stop='1560757188912'>
+            <name>2 - Authorization page. Not registered user</name>
+            <title>2 - Authorization page. Not registered user</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1560757181267' status='passed' stop='1560757186201'>
+                    <name>"before each" hook</name>
+                    <title>"before each" hook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1560757188941' status='passed' stop='1560757193093'>
+            <name>3 - Authorization page. Invalid email</name>
+            <title>3 - Authorization page. Invalid email</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1560757188942' status='passed' stop='1560757191536'>
+                    <name>"before each" hook</name>
+                    <title>"before each" hook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1560757193134' status='passed' stop='1560757197304'>
+            <name>4 - Authorization page. Empty fields</name>
+            <title>4 - Authorization page. Empty fields</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1560757193134' status='passed' stop='1560757196204'>
+                    <name>"before each" hook</name>
+                    <title>"before each" hook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1560757197319' status='passed' stop='1560757203882'>
+            <name>1 - Authorization page (Welcome back!)</name>
+            <title>1 - Authorization page (Welcome back!)</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1560757197319' status='passed' stop='1560757200446'>
+                    <name>"before each" hook</name>
+                    <title>"before each" hook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

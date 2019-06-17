@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1560757208314' stop='1560757221883'>
+    <name>Logout</name>
+    <title>Logout</title>
+    <test-cases>
+        <test-case start='1560757208314' status='passed' stop='1560757221865'>
+            <name>5 - Log Out</name>
+            <title>5 - Log Out</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1560757208315' status='passed' stop='1560757219304'>
+                    <name>"before each" hook</name>
+                    <title>"before each" hook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

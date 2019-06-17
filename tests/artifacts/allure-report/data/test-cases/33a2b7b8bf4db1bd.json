@@ -1,0 +1,82 @@
+{
+  "uid" : "33a2b7b8bf4db1bd",
+  "name" : "4 - Authorization page. Empty fields",
+  "fullName" : "Authorization.4 - Authorization page. Empty fields",
+  "historyId" : "7a5c0f402a9d08e1232b7964e3066d86",
+  "time" : {
+    "start" : 1560757193134,
+    "stop" : 1560757197304,
+    "duration" : 4170
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "\"before each\" hook",
+      "time" : {
+        "start" : 1560757193134,
+        "stop" : 1560757196204,
+        "duration" : 3070
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-1"
+  }, {
+    "name" : "suite",
+    "value" : "Authorization"
+  }, {
+    "name" : "testClass",
+    "value" : "Authorization"
+  }, {
+    "name" : "testMethod",
+    "value" : "4 - Authorization page. Empty fields"
+  }, {
+    "name" : "package",
+    "value" : "Authorization"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "33a2b7b8bf4db1bd.json",
+  "parameterValues" : [ "chrome" ]
+}

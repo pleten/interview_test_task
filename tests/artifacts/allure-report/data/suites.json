@@ -1,0 +1,141 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Home page",
+    "children" : [ {
+      "name" : "8.1 - \"Personal\" filter",
+      "uid" : "59ae63c6195e3e2b",
+      "parentUid" : "b98fe6c318e17fb112606f80a487ab1e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757120341,
+        "stop" : 1560757132555,
+        "duration" : 12214
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "8.2 - \"Business\" and “One domain” filter",
+      "uid" : "e3b9671583870748",
+      "parentUid" : "b98fe6c318e17fb112606f80a487ab1e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757132577,
+        "stop" : 1560757154938,
+        "duration" : 22361
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "8.3 - Sorting",
+      "uid" : "9f1497ff1810bf1b",
+      "parentUid" : "b98fe6c318e17fb112606f80a487ab1e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757154975,
+        "stop" : 1560757175681,
+        "duration" : 20706
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    } ],
+    "uid" : "b98fe6c318e17fb112606f80a487ab1e"
+  }, {
+    "name" : "Authorization",
+    "children" : [ {
+      "name" : "2 - Authorization page. Not registered user",
+      "uid" : "1ff460540d16325e",
+      "parentUid" : "f955e684e4108076acfabc2f0cdb7320",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757181266,
+        "stop" : 1560757188912,
+        "duration" : 7646
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "3 - Authorization page. Invalid email",
+      "uid" : "1c2611c487512f0a",
+      "parentUid" : "f955e684e4108076acfabc2f0cdb7320",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757188941,
+        "stop" : 1560757193093,
+        "duration" : 4152
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "4 - Authorization page. Empty fields",
+      "uid" : "33a2b7b8bf4db1bd",
+      "parentUid" : "f955e684e4108076acfabc2f0cdb7320",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757193134,
+        "stop" : 1560757197304,
+        "duration" : 4170
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "1 - Authorization page (Welcome back!)",
+      "uid" : "647fa593756c4e34",
+      "parentUid" : "f955e684e4108076acfabc2f0cdb7320",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757197319,
+        "stop" : 1560757203882,
+        "duration" : 6563
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    } ],
+    "uid" : "f955e684e4108076acfabc2f0cdb7320"
+  }, {
+    "name" : "Logout",
+    "children" : [ {
+      "name" : "5 - Log Out",
+      "uid" : "8728429f8139e8c4",
+      "parentUid" : "7889adc551fb943d344581d130caec92",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757208314,
+        "stop" : 1560757221865,
+        "duration" : 13551
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    } ],
+    "uid" : "7889adc551fb943d344581d130caec92"
+  }, {
+    "name" : "My Profile",
+    "children" : [ {
+      "name" : "6 - My profile page. Client area",
+      "uid" : "618056f47bf63827",
+      "parentUid" : "d532da0c07edff88d68801685dac82eb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757225891,
+        "stop" : 1560757271524,
+        "duration" : 45633
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "7 - My profile page. Refresh support pin",
+      "uid" : "891faa33bed290f2",
+      "parentUid" : "d532da0c07edff88d68801685dac82eb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757271570,
+        "stop" : 1560757326555,
+        "duration" : 54985
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    } ],
+    "uid" : "d532da0c07edff88d68801685dac82eb"
+  } ]
+}

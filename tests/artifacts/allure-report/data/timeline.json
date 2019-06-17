@@ -1,0 +1,141 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "0-1",
+    "children" : [ {
+      "name" : "2 - Authorization page. Not registered user",
+      "uid" : "1ff460540d16325e",
+      "parentUid" : "27fa874cadc1574e37a07abb440963bd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757181266,
+        "stop" : 1560757188912,
+        "duration" : 7646
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "1 - Authorization page (Welcome back!)",
+      "uid" : "647fa593756c4e34",
+      "parentUid" : "27fa874cadc1574e37a07abb440963bd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757197319,
+        "stop" : 1560757203882,
+        "duration" : 6563
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "3 - Authorization page. Invalid email",
+      "uid" : "1c2611c487512f0a",
+      "parentUid" : "27fa874cadc1574e37a07abb440963bd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757188941,
+        "stop" : 1560757193093,
+        "duration" : 4152
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "4 - Authorization page. Empty fields",
+      "uid" : "33a2b7b8bf4db1bd",
+      "parentUid" : "27fa874cadc1574e37a07abb440963bd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757193134,
+        "stop" : 1560757197304,
+        "duration" : 4170
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    } ],
+    "uid" : "27fa874cadc1574e37a07abb440963bd"
+  }, {
+    "name" : "0-3",
+    "children" : [ {
+      "name" : "6 - My profile page. Client area",
+      "uid" : "618056f47bf63827",
+      "parentUid" : "b755a79e149728f67460aea38b0710e0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757225891,
+        "stop" : 1560757271524,
+        "duration" : 45633
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "7 - My profile page. Refresh support pin",
+      "uid" : "891faa33bed290f2",
+      "parentUid" : "b755a79e149728f67460aea38b0710e0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757271570,
+        "stop" : 1560757326555,
+        "duration" : 54985
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    } ],
+    "uid" : "b755a79e149728f67460aea38b0710e0"
+  }, {
+    "name" : "0-0",
+    "children" : [ {
+      "name" : "8.2 - \"Business\" and “One domain” filter",
+      "uid" : "e3b9671583870748",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757132577,
+        "stop" : 1560757154938,
+        "duration" : 22361
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "8.1 - \"Personal\" filter",
+      "uid" : "59ae63c6195e3e2b",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757120341,
+        "stop" : 1560757132555,
+        "duration" : 12214
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "8.3 - Sorting",
+      "uid" : "9f1497ff1810bf1b",
+      "parentUid" : "516fe00eea05ad99e936fa729b55eff4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757154975,
+        "stop" : 1560757175681,
+        "duration" : 20706
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    } ],
+    "uid" : "516fe00eea05ad99e936fa729b55eff4"
+  }, {
+    "name" : "0-2",
+    "children" : [ {
+      "name" : "5 - Log Out",
+      "uid" : "8728429f8139e8c4",
+      "parentUid" : "880a094af3dffab161e2023284569d6f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1560757208314,
+        "stop" : 1560757221865,
+        "duration" : 13551
+      },
+      "flaky" : false,
+      "parameters" : [ "chrome" ]
+    } ],
+    "uid" : "880a094af3dffab161e2023284569d6f"
+  } ]
+}

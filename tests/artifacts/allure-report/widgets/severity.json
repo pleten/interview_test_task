@@ -1,0 +1,101 @@
+[ {
+  "uid" : "59ae63c6195e3e2b",
+  "name" : "8.1 - \"Personal\" filter",
+  "time" : {
+    "start" : 1560757120341,
+    "stop" : 1560757132555,
+    "duration" : 12214
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "891faa33bed290f2",
+  "name" : "7 - My profile page. Refresh support pin",
+  "time" : {
+    "start" : 1560757271570,
+    "stop" : 1560757326555,
+    "duration" : 54985
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e3b9671583870748",
+  "name" : "8.2 - \"Business\" and “One domain” filter",
+  "time" : {
+    "start" : 1560757132577,
+    "stop" : 1560757154938,
+    "duration" : 22361
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1ff460540d16325e",
+  "name" : "2 - Authorization page. Not registered user",
+  "time" : {
+    "start" : 1560757181266,
+    "stop" : 1560757188912,
+    "duration" : 7646
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8728429f8139e8c4",
+  "name" : "5 - Log Out",
+  "time" : {
+    "start" : 1560757208314,
+    "stop" : 1560757221865,
+    "duration" : 13551
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "33a2b7b8bf4db1bd",
+  "name" : "4 - Authorization page. Empty fields",
+  "time" : {
+    "start" : 1560757193134,
+    "stop" : 1560757197304,
+    "duration" : 4170
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "647fa593756c4e34",
+  "name" : "1 - Authorization page (Welcome back!)",
+  "time" : {
+    "start" : 1560757197319,
+    "stop" : 1560757203882,
+    "duration" : 6563
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9f1497ff1810bf1b",
+  "name" : "8.3 - Sorting",
+  "time" : {
+    "start" : 1560757154975,
+    "stop" : 1560757175681,
+    "duration" : 20706
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "618056f47bf63827",
+  "name" : "6 - My profile page. Client area",
+  "time" : {
+    "start" : 1560757225891,
+    "stop" : 1560757271524,
+    "duration" : 45633
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1c2611c487512f0a",
+  "name" : "3 - Authorization page. Invalid email",
+  "time" : {
+    "start" : 1560757188941,
+    "stop" : 1560757193093,
+    "duration" : 4152
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

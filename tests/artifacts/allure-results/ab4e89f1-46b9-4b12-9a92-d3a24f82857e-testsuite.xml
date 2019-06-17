@@ -1,0 +1,70 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1560757120340' stop='1560757175706'>
+    <name>Home page</name>
+    <title>Home page</title>
+    <test-cases>
+        <test-case start='1560757120341' status='passed' stop='1560757132555'>
+            <name>8.1 - "Personal" filter</name>
+            <title>8.1 - "Personal" filter</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1560757120342' status='passed' stop='1560757130324'>
+                    <name>"before each" hook</name>
+                    <title>"before each" hook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1560757132577' status='passed' stop='1560757154938'>
+            <name>8.2 - "Business" and “One domain” filter</name>
+            <title>8.2 - "Business" and “One domain” filter</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1560757132577' status='passed' stop='1560757152091'>
+                    <name>"before each" hook</name>
+                    <title>"before each" hook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1560757154975' status='passed' stop='1560757175681'>
+            <name>8.3 - Sorting</name>
+            <title>8.3 - Sorting</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1560757154976' status='passed' stop='1560757174651'>
+                    <name>"before each" hook</name>
+                    <title>"before each" hook</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

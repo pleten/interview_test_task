@@ -1,0 +1,82 @@
+{
+  "uid" : "1c2611c487512f0a",
+  "name" : "3 - Authorization page. Invalid email",
+  "fullName" : "Authorization.3 - Authorization page. Invalid email",
+  "historyId" : "976044f27ab63d0dd57e2ca33a4489d4",
+  "time" : {
+    "start" : 1560757188941,
+    "stop" : 1560757193093,
+    "duration" : 4152
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "\"before each\" hook",
+      "time" : {
+        "start" : 1560757188942,
+        "stop" : 1560757191536,
+        "duration" : 2594
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-1"
+  }, {
+    "name" : "suite",
+    "value" : "Authorization"
+  }, {
+    "name" : "testClass",
+    "value" : "Authorization"
+  }, {
+    "name" : "testMethod",
+    "value" : "3 - Authorization page. Invalid email"
+  }, {
+    "name" : "package",
+    "value" : "Authorization"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1c2611c487512f0a.json",
+  "parameterValues" : [ "chrome" ]
+}

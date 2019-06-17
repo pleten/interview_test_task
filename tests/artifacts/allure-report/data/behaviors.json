@@ -1,0 +1,125 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "8.1 - \"Personal\" filter",
+    "uid" : "59ae63c6195e3e2b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1560757120341,
+      "stop" : 1560757132555,
+      "duration" : 12214
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "8.2 - \"Business\" and “One domain” filter",
+    "uid" : "e3b9671583870748",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1560757132577,
+      "stop" : 1560757154938,
+      "duration" : 22361
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "8.3 - Sorting",
+    "uid" : "9f1497ff1810bf1b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1560757154975,
+      "stop" : 1560757175681,
+      "duration" : 20706
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "2 - Authorization page. Not registered user",
+    "uid" : "1ff460540d16325e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1560757181266,
+      "stop" : 1560757188912,
+      "duration" : 7646
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "3 - Authorization page. Invalid email",
+    "uid" : "1c2611c487512f0a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1560757188941,
+      "stop" : 1560757193093,
+      "duration" : 4152
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "4 - Authorization page. Empty fields",
+    "uid" : "33a2b7b8bf4db1bd",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1560757193134,
+      "stop" : 1560757197304,
+      "duration" : 4170
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "1 - Authorization page (Welcome back!)",
+    "uid" : "647fa593756c4e34",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1560757197319,
+      "stop" : 1560757203882,
+      "duration" : 6563
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "5 - Log Out",
+    "uid" : "8728429f8139e8c4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1560757208314,
+      "stop" : 1560757221865,
+      "duration" : 13551
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "6 - My profile page. Client area",
+    "uid" : "618056f47bf63827",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1560757225891,
+      "stop" : 1560757271524,
+      "duration" : 45633
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "7 - My profile page. Refresh support pin",
+    "uid" : "891faa33bed290f2",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1560757271570,
+      "stop" : 1560757326555,
+      "duration" : 54985
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  } ]
+}
