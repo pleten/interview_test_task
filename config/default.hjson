@@ -1,0 +1,12 @@
+# Default settings of TAF to be shared between environment specific configurations.
+
+{
+  # Test environment name
+  testEnv: ''
+
+  # Directory with test reports and logs
+  runOutputsDirectory: run-results
+
+  # TAF runtime information directory
+  runtimeData: runtime-data
+}
