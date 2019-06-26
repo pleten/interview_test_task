@@ -1,0 +1,33 @@
+{
+  "name": "interview_test_task",
+  "version": "1.0.0",
+  "description": "This repository is for uploading results of the completed test task.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EOzerova/interview_test_task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EOzerova/interview_test_task/issues"
+  },
+  "homepage": "https://github.com/EOzerova/interview_test_task#readme",
+  "dependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/node": "^12.0.10",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "config": "^3.1.0",
+    "cucumber": "^5.1.0",
+    "cucumber-html-reporter": "^5.0.0",
+    "protractor": "^5.4.2",
+    "protractor-cucumber-framework": "^6.1.2",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.2",
+    "webdriver-manager": "^12.1.5"
+  }
+}
