@@ -4,7 +4,7 @@
   "description": "This repository is for uploading results of the completed test task.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "protractor ./config/chrome.js"
   },
   "repository": {
     "type": "git",
