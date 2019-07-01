@@ -1,6 +1,6 @@
 import { $, ExpectedConditions, browser, by, element } from "protractor";
 
-class LoginPageObject {
+class AuthorizationPageObject {
     private loginInput = $("input[name='email']");
     private passwordInput = $("input[name='password']");
     private loginButton = $("button.primary");
@@ -9,7 +9,7 @@ class LoginPageObject {
 
     public async goToAuthorizationPage() {
         await browser.get(`${browser.baseUrl}/authorize`);
-        await browser.wait(ExpectedConditions.urlIs(`${browser.baseUrl}/authorize`), 3000);
+       // await browser.wait(ExpectedConditions.urlIs(`${browser.baseUrl}/authorize`), 6000);
     }
 
     public async isAuthorizationPageOpened() {
@@ -74,4 +74,4 @@ class LoginPageObject {
     }
 }
 
-export const onLoginPage: LoginPageObject = new LoginPageObject();
+export const onAuthorizationPage: AuthorizationPageObject = new AuthorizationPageObject();

@@ -17,7 +17,7 @@ Feature: Authorization page
         Examples:
             | password  |
             | test_pass |
-
+    @toSkip
     Scenario Outline: Validation error message should be displayed during login with unregistered creds
         Given I am on Login page
         When I fill in <email> and <password> fields
@@ -27,7 +27,7 @@ Feature: Authorization page
         Examples:
             | email         | password  | message                               |
             | test@test.com | test_pass | Uh oh! Email or password is incorrect |
-
+    @toSkip
     Scenario Outline: Validation error message should be displayed in case of login with invalid email
         Given I am on Login page
         When I fill in <email> and <password> fields
@@ -36,20 +36,20 @@ Feature: Authorization page
         Examples:
             | email          | password  | message                    |
             | test@@test.com | test_pass | Uh oh! This isn’t an email |
-
+    @toSkip
     Scenario Outline: Validation error should occur if email field is empty
         Given I am on Login page
-        When I fill <password> into Password field
+        When I fill in <password> into Password field
         And I initiate login
         Then <message> validation message for Email filed should be displayed
 
         Examples:
             | password  | message                       |
             | test_pass | Oops, please enter your email |
-
+    @toSkip
     Scenario Outline: Validation error should occur if password field is empty
         Given I am on Login page
-        When I fill <email> into Email field
+        When I fill in <email> into Email field
         And I initiate login
         Then <message> validation message for Password field should be displayed
 

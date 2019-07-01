@@ -6,6 +6,10 @@ Before({ timeout: 10 * 2000 }, async () => {
     await browser.get(browser.baseUrl);
 });
 
+Before({ tags: "@toSkip" }, function () {
+    return "skipped";
+});
+
 After(async function (scenario) {
     if (scenario.result.status === Status.FAILED) {
         // screenShot is a base-64 encoded PNG

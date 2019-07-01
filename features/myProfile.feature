@@ -4,7 +4,8 @@ Feature: My Profile feature
 
     Scenario: User profile page should contain
         Given I login as registered user
-        When I open My profile page from the dropdown menu
+        When I open dropdown menu and remember user data values
+        And I open My profile page
         Then User name, Email and Support pin on Profile form should match corresponding values on the dropdown menu
         And Password, Phone and Address fields should not be empty
 

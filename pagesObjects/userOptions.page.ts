@@ -15,6 +15,7 @@ class DropDownMenu {
 
     public async isUserCertificatesListButtonDisplayed() {
         try {
+            await browser.wait(ExpectedConditions.presenceOf($("div.profile-box>a")), 2000);
             return await this.userCertificatesListButton.isDisplayed();
         }
         catch (e) {
