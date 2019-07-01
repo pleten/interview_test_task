@@ -13,6 +13,6 @@ Feature: My Profile feature
         Given I login as registered user
         When I open My profile page from the dropdown menu
         And I refresh Support pin on Profile form
-        Then Support pin should be updated on Profile form and on dropdown menu
-
+        Then Support pin should be updated on Profile form
+        And New support pin should be displayed on dropDown menu
 

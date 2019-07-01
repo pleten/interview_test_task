@@ -2,14 +2,14 @@ const { When, Then } = require("cucumber");
 const expect = require("chai").use(require("chai-as-promised")).expect;
 import { onDropDownMenu } from "../pagesObjects";
 import { onProfilePage } from "../pagesObjects/profilePage";
-
-const userData = { userName: "", userEmail: "", supportPin: "" };
+import { context } from "../support/hooks";
 
 When(/^I open dropdown menu and remember user data values$/, async function () {
+    context.userData = { userName: "", userEmail: "", supportPin: "" };
     await onDropDownMenu.openDropDownMenu();
-    userData.userName = await onDropDownMenu.getUserNameFromDropBox();
-    userData.userEmail = await onDropDownMenu.getUserEmailFromDropBox();
-    userData.supportPin = await onDropDownMenu.getSupportedPinFromDropBox();
+    context.userData.userName = await onDropDownMenu.getUserNameFromDropBox();
+    context.userData.userEmail = await onDropDownMenu.getUserEmailFromDropBox();
+    context.userData.supportPin = await onDropDownMenu.getSupportedPinFromDropBox();
 });
 
 When(/^I open My profile page$/, async () => {
@@ -22,7 +22,7 @@ When(/^I open My profile page from the dropdown menu$/, async function () {
 });
 
 When(/^I refresh Support pin on Profile form$/, async function () {
-    this.oldPin = await onProfilePage.getActualPin();
+    context.oldPin = await onProfilePage.getActualPin();
     await onProfilePage.updateSupportPin();
 });
 
@@ -31,9 +31,9 @@ Then(/^User name, Email and Support pin on Profile form should match correspondi
     const userEmailFromProfile = await onProfilePage.getUserEmail();
     const supportPinFromProfile = await onProfilePage.getActualPin();
 
-    expect(userNameFromProfile).to.be.equal(userData.userName);
-    expect(userEmailFromProfile).to.be.equal(userData.userEmail);
-    expect(supportPinFromProfile).to.be.equal(userData.supportPin);
+    expect(userNameFromProfile).to.be.equal(context.userData.userName);
+    expect(userEmailFromProfile).to.be.equal(context.userData.userEmail);
+    expect(supportPinFromProfile).to.be.equal(context.userData.supportPin);
 });
 
 Then(/^Password, Phone and Address fields should not be empty$/, async function () {
@@ -45,11 +45,16 @@ Then(/^Password, Phone and Address fields should not be empty$/, async function 
     expect(userAddressFromProfile.length > 0).to.be.true;
 });
 
-Then(/^Support pin should be updated on Profile form and on dropdown menu$/, async function () {
-    const actualPinFromProfile = await onProfilePage.getActualPin();
+Then(/^Support pin should be updated on Profile form$/, async function () {
+    context.actualPinFromProfile = await onProfilePage.getActualPin();
+
+    expect(context.actualPinFromProfile).to.be.not.equal(context.oldPin);
+});
+
+Then(/^New support pin should be displayed on dropDown menu$/, async function(){
     await onDropDownMenu.openDropDownMenu();
-    const actualPinFromDropDownMenu = await onDropDownMenu.getSupportedPinFromDropBox();
-    expect(actualPinFromProfile).to.be.not.equal(this.oldPin);
-    expect(actualPinFromDropDownMenu).to.be.not.equal(this.oldPin);
-    expect(actualPinFromDropDownMenu).to.be.equal(actualPinFromProfile);
+    const currentPinFromDropDownMenu = await onDropDownMenu.getSupportedPinFromDropBox();
+
+    expect(currentPinFromDropDownMenu).to.be.not.equal(context.oldPin);
+    expect(context.actualPinFromProfile).to.be.equal(currentPinFromDropDownMenu);
 });

@@ -1,7 +1,8 @@
 import { $, ExpectedConditions, browser, by, element } from "protractor";
+import { commonMethods } from "./commonMethods";
 
 class AuthorizationPageObject {
-    private loginInput = $("input[name='email']");
+    private loginInput = $("div.email>input[name='email']");
     private passwordInput = $("input[name='password']");
     private loginButton = $("button.primary");
     private eyeButton = $("button[ng-click='showPassword = !showPassword']");
@@ -9,7 +10,7 @@ class AuthorizationPageObject {
 
     public async goToAuthorizationPage() {
         await browser.get(`${browser.baseUrl}/authorize`);
-       // await browser.wait(ExpectedConditions.urlIs(`${browser.baseUrl}/authorize`), 6000);
+        // await browser.wait(ExpectedConditions.urlIs(`${browser.baseUrl}/authorize`), 6000);
     }
 
     public async isAuthorizationPageOpened() {
@@ -48,29 +49,29 @@ class AuthorizationPageObject {
     }
 
     public async getValidationMessageForEmailField() {
-        const messageText = await element.all(by.xpath("//*/div[@class='form-group email']/div[@class='left-tooltip-box']//span[@class='tooltip-text']")).getText();
+        const messageText = await element.all(by.xpath("//*/div[@class='form-group email']/div[@class='left-tooltip-box']//span[@class='tooltip-text']")).first().getText();
         return messageText.replace("\n", " ").trim();
     }
 
     public async getValidationMessageForPasswordField() {
-        const messageText = await element.all(by.xpath("//*/div[@class='form-group']/div[@class='left-tooltip-box']//span[@class='tooltip-text']")).getText();
+        const messageText = await element.all(by.xpath("//*/div[@class='form-group']/div[@class='left-tooltip-box']//span[@class='tooltip-text']")).first().getText();
         return messageText.replace("\n", " ").trim();
     }
 
     public async isValidationMessageDisplayedForEmailField() {
-        return await element.all(by.xpath("//*/div[@class='form-group email']/div[@class='left-tooltip-box']//span[@class='tooltip-text']")).isDisplayed();
+        return await commonMethods.isElementDisplayed(element.all(by.xpath("//*/div[@class='form-group email']/div[@class='left-tooltip-box']//span[@class='tooltip-text']")).first());
     }
 
     public async isValidationMessageDisplayedForPasswordField() {
-        return await element.all(by.xpath("//*/div[@class='form-group']/div[@class='left-tooltip-box']//span[@class='tooltip-text']")).isDisplayed();
+        return await commonMethods.isElementDisplayed(element.all(by.xpath("//*/div[@class='form-group']/div[@class='left-tooltip-box']//span[@class='tooltip-text']")).first());
     }
 
     public async isNotificationMessageDisplayed() {
-        return await this.notyMessageContainer.isDisplayed();
+        return await commonMethods.isElementDisplayed($("div.noty_message>span.noty_text"));
     }
 
     public async getNotificationMessageText() {
-        return await this.notyMessageContainer.getText();
+        return await $("div.noty_message>span.noty_text").getText();
     }
 }
 

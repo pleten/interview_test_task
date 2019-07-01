@@ -4,6 +4,7 @@ import { browser } from "protractor";
 Before({ timeout: 10 * 2000 }, async () => {
     await setDefaultTimeout(100 * 2000);
     await browser.get(browser.baseUrl);
+    context = <any>{};
 });
 
 Before({ tags: "@toSkip" }, function () {
@@ -21,6 +22,8 @@ After(async function (scenario) {
     clearLocalStorage();
     clearCookies();
 });
+
+export let context = <any>{};
 
 export async function clearSessionStorage(): Promise<void> {
     await browser.executeScript('window.sessionStorage.clear();');

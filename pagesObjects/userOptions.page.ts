@@ -63,8 +63,9 @@ class DropDownMenu {
         const arrayOfUserData = dropBoxText.split("\nSupport pin:");
 
         userData.userName = await this.userNameText.getText();
-        userData.userEmail = arrayOfUserData[0].trim();
+        userData.userEmail = arrayOfUserData[0].split(" ")[2];
         userData.pin = arrayOfUserData[1].trim();
+
         return userData;
     }
 
