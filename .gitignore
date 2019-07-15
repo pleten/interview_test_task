@@ -2,4 +2,3 @@ node_modules/
 reports/
 .vscode
 .idea
-*.js
