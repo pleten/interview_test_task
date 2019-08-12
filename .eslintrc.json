@@ -1,0 +1,74 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:protractor/recommended",
+        "plugin:jasmine/recommended"
+    ],
+    "env": {
+        "browser": true,
+        "node": true,
+        "jasmine": true,
+        "protractor": true,
+        "es6": true,
+        "mocha": true
+    },
+    "globals": {
+        "angular": false,
+        "inject": false,
+        "EC": false,
+        "mailListener": false,
+        "helpers": false,
+        "mock": false,
+        "requirePO": true,
+        "requireHelper": true,
+        "ngDescribe": false,
+        "sinon": false,
+        "CryptoJS": false,
+        "pako": false,
+        "using": false
+    },
+    "plugins": [
+        "disable",
+        "jasmine",
+        "protractor",
+        "requirejs",
+        "mocha"
+    ],
+    "rules": {
+        "no-multiple-empty-lines": 2,
+        "no-mixed-spaces-and-tabs": 0,
+        "no-trailing-spaces": 0,
+        "angular/log": 0,
+        "jasmine/missing-expect": [
+            2,
+            "expect()",
+            "browser.wait()",
+            "helpers.testTabOrder()"
+        ],
+        "jasmine/valid-expect": 2,
+        "eqeqeq": [
+            2,
+            "smart"
+        ],
+        "requirejs/no-js-extension": 2,
+        "requirejs/no-invalid-define": 2,
+        "requirejs/no-invalid-require": 2,
+        "requirejs/no-multiple-define": 2,
+        "protractor/no-browser-driver": 1
+    },
+    "settings": {
+        "eslint-plugin-protractor": {
+            "paths": {
+                "po": [
+                    "**/e2e/po/*.po.js"
+                ],
+                "specs": [
+                    "**/e2e/specs/**/*.spec.js"
+                ]
+            }
+        }
+    },
+    "parserOptions": {
+        "ecmaVersion": 2017
+    }
+}
