@@ -25,10 +25,6 @@ describe("Home page. Filters", function () {
         headerPage.certsLink.click();
     });
 
-    afterAll(function () {
-        helpers.logOut();
-    });
-
     using(filters, function (filters) {
         describe(filters.name, function () {
             afterAll(function () {

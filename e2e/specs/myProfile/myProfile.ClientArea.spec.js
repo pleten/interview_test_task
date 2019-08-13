@@ -35,6 +35,7 @@ describe("My profile page. Client area", function () {
         const currentValues = profilePage.profileValues.map(function (elm) {
             return elm.getText();
         });
+        // clould be flaky, if someone runs a test like this in parallel
         expect(preconditionValues).toEqual(currentValues);
     });
 });

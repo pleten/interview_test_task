@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 
 installTestsDependencies:
-	yarn install
+	npm install
 
 testE2eRemoteParallels:
 	node_modules/protractor-flake/bin/protractor-flake --parser standard  --max-attempts=2 -- e2e/config/remote.conf.js

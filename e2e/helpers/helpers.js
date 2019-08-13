@@ -79,6 +79,22 @@ const Helpers = function () {
         }
     };
 
+    // compare values got from the page with the sorted values 
+    this.sortedByPrice = async function () {
+        let values,
+            valuesBeforeSorting,
+            sortedValues;
+
+        // eslint-disable-next-line protractor/no-repetitive-selectors
+        values = element.all(by.css(".cert-list .ssl-content price.lg-price")).map(function (elm) {
+            return elm.getAttribute("value");
+        });
+        valuesBeforeSorting = await values;
+        sortedValues = valuesBeforeSorting.toString().split(",").sort((a, b) => a - b);
+
+        expect(await values).toEqual(sortedValues);
+    };
+
     // custom Expected Condition to wait for the URL to change and match a given pattern
     this.urlChanged = function (pattern) {
         return function () {

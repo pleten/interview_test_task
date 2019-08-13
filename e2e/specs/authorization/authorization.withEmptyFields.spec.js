@@ -61,7 +61,7 @@ describe("Authorization page. Empty fields", function () {
         expect(authPage.authFieldsTooltips(authPage.email, true).getText()).toEqual("Oops, please\nenter your email");
     });
 
-    it("should show the '“Looks like you’ve missed this one' error message next to the 'Password' field after trying to login without email and password on the 'Authorization' page", function () {  
+    it("should show the 'Looks like you’ve missed this one' error message next to the 'Password' field after trying to login without email and password on the 'Authorization' page", function () {  
         expect(authPage.authFieldsTooltips(authPage.password, true).isDisplayed()).toEqual(true);
         expect(authPage.authFieldsTooltips(authPage.password, true).getText()).toEqual("Looks like you’ve\nmissed this one");
     });

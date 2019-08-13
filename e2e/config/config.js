@@ -1,11 +1,8 @@
 /* eslint-disable angular/json-functions */
 "use strict";
  
-const baseUrl = 'https://www.sbzend.ssls.com'
-const password = '123456';
-
-// const baseUrl = process.env.BASE_URL;
-// const password = process.env.PASSWORD;
+const baseUrl = process.env.BASE_URL;
+const password = process.env.PASSWORD;
 
 let config;
 config = {

@@ -13,9 +13,14 @@ const HomePage = function () {
     };
 
     // eslint-disable-next-line protractor/no-by-xpath
-    this.cheeapestSortBtn = element(by.xpath("//a[contains(text(), 'Cheapes')]"));
+    this.cheeapestSortBtn = element(by.xpath("//span[contains(@class, 'icon-sort-alt-up')]//.."));
     // eslint-disable-next-line protractor/valid-locator-type
-    this.cheeapestSortIcon = this.cheeapestSortBtn.element('.icon-sort-alt-up');
+    this.cheeapestSortIcon = element(by.css('.icon-sort-alt-up'));
+
+    // eslint-disable-next-line protractor/no-by-xpath
+    this.featuredSortBtn = element(by.xpath("//span[contains(@class, 'icon-sort-alt-down')]//.."));
+    // eslint-disable-next-line protractor/valid-locator-type
+    this.featuredSortIcon = element(by.css('.icon-sort-alt-down'));
 };
 
 module.exports = new HomePage();
