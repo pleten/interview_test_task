@@ -31,6 +31,7 @@ const AuthorizationPage = function () {
             }
                 break;
             default: {
+                // eslint-disable-next-line no-console
                 errorTooltip = console.log('No error message next to the "' + fieldName + '(' + isEmptyField + ')"')
             }
         }

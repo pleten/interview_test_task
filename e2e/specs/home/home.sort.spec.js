@@ -1,7 +1,6 @@
 "use strict";
 
-const headerPage = requirePO("layout/header"),
-    homePage = requirePO("home/home");
+const headerPage = requirePO("layout/header");
 
 describe("Home page. Sorting", function () {
     beforeAll(function () {

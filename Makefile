@@ -11,3 +11,6 @@ testE2eLocal:
 
 generateAllureReport:
 	node_modules/allure-commandline/bin/allure serve
+
+esLint:
+	node_modules/.bin/eslint e2e/

@@ -3,7 +3,7 @@
 "use strict";
 
 const config = require('./shared.conf'),
-selenoidUrl = require('./config.js').selenoidUrl;
+selenoidUrl = require('./config').selenoidUrl;
 
 config.directConnect = false;
 

@@ -1,19 +1,17 @@
 "use strict";
 
-const headerPage = requirePO("layout/header"),
-    profilePage = requirePO("profile/profile"),
+const profilePage = requirePO("profile/profile"),
     email = browser.params.users.regularUser.email,
     password = browser.params.users.regularUser.password;
 
-let profileData,
-    preconditionValues;
+let preconditionValues;
 
 describe("My profile page. Client area", function () {
     beforeAll(function () {
         browser.get("/");
         helpers.logIn(email, password);
         helpers.openProfilePage();
-        preconditionValues = element.all(by.css("form .item .description span.text")).map(function (elm) {
+        preconditionValues = profilePage.profileValues.map(function (elm) {
             return elm.getText();
         });
         helpers.logOut();
@@ -34,7 +32,7 @@ describe("My profile page. Client area", function () {
     });
 
     it("should show the same values on the page as in the preconditions", function () {
-        const currentValues = element.all(by.css("form .item .description span.text")).map(function (elm) {
+        const currentValues = profilePage.profileValues.map(function (elm) {
             return elm.getText();
         });
         expect(preconditionValues).toEqual(currentValues);

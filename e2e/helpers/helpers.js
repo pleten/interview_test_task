@@ -49,6 +49,7 @@ const Helpers = function () {
     };
 
     this.unselectFilters = async function () {
+        // eslint-disable-next-line protractor/no-angular-classes
         const rows = await element.all(by.css("div.filter-row.ng-scope"))
         const rowsSum = rows.length;
 
@@ -60,9 +61,9 @@ const Helpers = function () {
                 let elem = await element(by.css('.filter-row:nth-child(' + row + ') .filter-item:nth-child(' + column + ') a.active'));
                 if (await elem.isPresent()) {
                     await element(by.css('.filter-row:nth-child(' + row + ') .filter-item:nth-child(' + column + ') a')).click();
-                };
-            };
-        };
+                }
+            }
+        }
     };
 
     this.filterByCardname = async function (cardname) {
@@ -75,7 +76,7 @@ const Helpers = function () {
                 return elm.getText();
             });
             expect(await values).toContain(cardname);
-        };
+        }
     };
 
     // custom Expected Condition to wait for the URL to change and match a given pattern

@@ -8,15 +8,14 @@ const HomePage = function () {
     };
 
     this.filterByName = function(filter) { 
+        // eslint-disable-next-line protractor/no-by-xpath
         return element(by.xpath("//a[contains(text(), '" + filter + "')]"));
     };
 
+    // eslint-disable-next-line protractor/no-by-xpath
     this.cheeapestSortBtn = element(by.xpath("//a[contains(text(), 'Cheapes')]"));
+    // eslint-disable-next-line protractor/valid-locator-type
     this.cheeapestSortIcon = this.cheeapestSortBtn.element('.icon-sort-alt-up');
-
-    
-    
-    
 };
 
 module.exports = new HomePage();

@@ -28,11 +28,9 @@
         "using": false
     },
     "plugins": [
-        "disable",
         "jasmine",
         "protractor",
-        "requirejs",
-        "mocha"
+        "requirejs"
     ],
     "rules": {
         "no-multiple-empty-lines": 2,
