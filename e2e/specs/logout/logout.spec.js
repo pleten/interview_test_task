@@ -11,7 +11,7 @@ describe("Log Out", function () {
         helpers.logIn(email, password);
     });
 
-    it("should navigate to the 'Authorization' page and show appropriate title after logout", function () {
+    it("should navigate to the 'Authorization' page and show the 'Sign In | SSLs.com' title after logout", function () {
         headerPage.userDropdownMenu.click();
         headerPage.logOutLink.click();
         authPage.wait();

@@ -11,9 +11,6 @@ const AuthorizationPage = function () {
     this.emailInput = element(by.css(this.email + "input"));
     this.passwordInput = element(by.css(this.password + "input"));
 
-    // this.emailTooltip = element(by.css(this.email + "span.tooltip-text"));
-    // this.passwordTooltip = element(by.css(this.password + "span.tooltip-text"))
-
     this.authFieldsTooltips = function (fieldName, isEmptyField) {
         let errorTooltip;
 

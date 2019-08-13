@@ -75,7 +75,7 @@ const Helpers = function () {
             values = element.all(by.css(".cert-list div:nth-child(" + row + ") .text")).map(function (elm) {
                 return elm.getText();
             });
-            expect(await values).toContain(cardname);
+            expect(await values).toContain(cardname, "Here is no filtered data - " + await element(by.css('.cert-list div:nth-child(' + row + ') h3')).getText());
         }
     };
 

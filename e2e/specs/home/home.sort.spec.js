@@ -9,7 +9,7 @@ describe("Home page. Sorting", function () {
         headerPage.certsLink.click();
     });
 
-    it("should show the 'FEATURED' button with the down icon after clicking the 'CHEPEAST' button", function () {
+    it("should show the 'FEATURED' button with the 'down' icon after clicking the 'CHEPEAST' button", function () {
         browser.wait(EC.elementToBeClickable(homePage.cheeapestSortBtn), 30000, "Sort button is not clicable.");
         homePage.cheeapestSortBtn.click();
         
@@ -23,7 +23,7 @@ describe("Home page. Sorting", function () {
     });
 
     // eslint-disable-next-line jasmine/missing-expect
-    it("should show the filtered results sorted from the chepeast to the featured after clicking the 'CHEPEAST' button", function () {
+    it("should show the filtered results sorted from the chepeast to the most expensive after clicking the 'CHEPEAST' button", function () {
         helpers.sortedByPrice();
     });
 });

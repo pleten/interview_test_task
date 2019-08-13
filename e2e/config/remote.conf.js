@@ -28,15 +28,16 @@ config.capabilities = {
 };
 
 config.specs = [
+    "../specs/myProfile/myProfile.ClientArea.spec.js", // this test and 'myProfile.refreshSupportPin.spec' test cannot be run in parallel at the same time
     "../specs/authorization/*.spec.js",
     "../specs/logout/*.spec.js",
-    "../specs/myProfile/*.spec.js",
+    "../specs/myProfile/myProfile.refreshSupportPin.spec.js", // this test and 'myProfile.ClientArea.spec' test cannot be run in parallel at the same time
     "../specs/home/*.spec.js"
 ];
 config.exclude = [];
 
-config.allScriptsTimeout = 50000;
-config.jasmineNodeOpts.defaultTimeoutInterval = 50000;
+config.allScriptsTimeout = 120000;
+config.jasmineNodeOpts.defaultTimeoutInterval = 120000;
 
 config.onComplete = async function () {
     console.log('Video: ' + selenoidUrl + ':4444/video/' + await JSON.stringify((browser.getSession()).value_).replace(/"/g, '') + '.mp4');

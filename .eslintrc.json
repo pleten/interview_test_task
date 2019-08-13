@@ -20,7 +20,6 @@
         "helpers": false,
         "mock": false,
         "requirePO": true,
-        "requireHelper": true,
         "ngDescribe": false,
         "sinon": false,
         "CryptoJS": false,

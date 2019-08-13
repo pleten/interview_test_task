@@ -17,7 +17,7 @@ describe("Authorization page (Welcome back!)", function () {
         helpers.logOut();
     });
 
-    it("should show appropriate title when an unathorized user is on the 'Home' page", function () {
+    it("should show the title with SSL Certs and save-up info when an unathorized user is on the 'Home' page", function () {
         browser.wait(EC.visibilityOf(homePage.promoBanner), 30000, 'Banner does not become visibile');
         expect(browser.getTitle()).toContain("SSL Certificates—Buy Cheap SSL Certs from ");
         expect(browser.getTitle()).toContain("& Save up to");
@@ -57,19 +57,25 @@ describe("Authorization page (Welcome back!)", function () {
         expect(authPage.forgotPasswordLink).toHaveColor(authPage.forgotPasswordLinkColor);
     });
 
-    it("should show the turned on eye mode by the default on the 'Authorization' page", function () {
+    it("should not show a password with the turned off 'eye' mode by the default on the 'Authorization' page", function () {
         authPage.emailInput.sendKeys(email);
         authPage.passwordInput.sendKeys(password);
 
         expect(authPage.passwordInput.getAttribute("type")).toEqual("password");
+    });
+
+    it("should show the not crossed eye icon with the turned off 'eye' mode by the default on the 'Authorization' page", function () {
         expect(authPage.onEyeIcon.isDisplayed()).toEqual(true);
         expect(authPage.offEyeIcon.isDisplayed()).toEqual(false);
     });
-
-    it("should show the turned off eye mode and password on the 'Authorization' page after click the 'Eye' icon ", function () {
+    
+    it("should show a password with the turned on 'eye' mode on the 'Authorization' page after click the 'Eye' icon ", function () {
         authPage.onEyeIcon.click();
 
         expect(authPage.passwordInput.getAttribute("type")).toEqual("text");
+    });
+
+    it("should show the crossed eye icon with the turned on 'eye' mode on the 'Authorization' page after click the 'Eye' icon ", function () {
         expect(authPage.onEyeIcon.isDisplayed()).toEqual(false);
         expect(authPage.offEyeIcon.isDisplayed()).toEqual(true);
     });

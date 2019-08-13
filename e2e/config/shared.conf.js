@@ -14,13 +14,13 @@ module.exports = {
     baseUrl: baseUrl,
 
     onPrepare: function () {
-        // link with vidoe to each test in Selenoid
+        // link with video to each test in Selenoid
         afterEach(async function () {
             // eslint-disable-next-line no-undef
-            allureCookies.addArgument('Video', selenoidUrl + ':4444/video/' + await JSON.stringify((browser.getSession()).value_).replace(/"/g, '') + '.mp4');
+            allureCookies.addArgument('Video (only for remote run)', selenoidUrl + ':4444/video/' + await JSON.stringify((browser.getSession()).value_).replace(/"/g, '') + '.mp4');
         });
         require('jasmine-expect');
-        var sharedOnPrepare = require('./onPrepare');
+        let sharedOnPrepare = require('./onPrepare');
         return sharedOnPrepare();
     },
 

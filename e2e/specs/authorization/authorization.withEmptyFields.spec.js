@@ -9,7 +9,7 @@ describe("Authorization page. Empty fields", function () {
         browser.get("/");
     });
 
-    it("should show appropriate title when a user is unathorized and after opening " + browser.params.baseUrl + " url", function () {
+    it("should show the title with SSL Certs and save-up info when a user is unathorized and after opening " + browser.params.baseUrl + " url", function () {
         browser.wait(EC.visibilityOf(homePage.promoBanner), 30000, 'Banner does not become visibile');
         expect(browser.getTitle()).toContain("SSL Certificates—Buy Cheap SSL Certs from ");
         expect(browser.getTitle()).toContain("& Save up to");
@@ -54,15 +54,26 @@ describe("Authorization page. Empty fields", function () {
         expect(authPage.loginButton.isEnabled()).toEqual(true);
     });
 
-    it("should show the 'Oops, please enter your email' error message next to the 'Email' field after trying to login without email and password on the 'Authorization' page", function () {
+    it("should show the 'Oops, please enter your email' error message next to the 'Email' field after clicking on the 'Login' button without email and password on the 'Authorization' page", function () {
         authPage.loginButton.click();
         browser.wait(EC.visibilityOf(authPage.authFieldsTooltips(authPage.email, true)), 30000, "Error is not visible.");        
         expect(authPage.authFieldsTooltips(authPage.email, true).isDisplayed()).toEqual(true);
         expect(authPage.authFieldsTooltips(authPage.email, true).getText()).toEqual("Oops, please\nenter your email");
     });
 
-    it("should show the 'Looks like you’ve missed this one' error message next to the 'Password' field after trying to login without email and password on the 'Authorization' page", function () {  
+    it("should show the 'Looks like you’ve missed this one' error message next to the 'Password' field after clickin on the 'Login' button without email and password on the 'Authorization' page", function () {  
         expect(authPage.authFieldsTooltips(authPage.password, true).isDisplayed()).toEqual(true);
         expect(authPage.authFieldsTooltips(authPage.password, true).getText()).toEqual("Looks like you’ve\nmissed this one");
+    });
+
+    it("should not show another errors after clickin on the 'Login' button without email and password on the 'Authorization' page", function () {        
+        expect(authPage.authFieldsTooltips(authPage.email, false).isDisplayed()).toEqual(false);
+        expect(authPage.lastErrorMessage.isPresent()).toEqual(false);
+    });
+
+    it("should not navigate to another page after clickin on the 'Login' button without email and password on the 'Authorization' page", function () {        
+        authPage.wait();
+        browser.wait(helpers.urlChanged(authPage.url), 15000, "There was no redirect to the 'Authorization' page.");
+        expect(browser.getTitle()).toEqual("Sign In | SSLs.com");
     });
 });

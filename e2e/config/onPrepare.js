@@ -12,16 +12,6 @@ module.exports = function () {
         return require(__dirname + '/../po/' + relativePath + '.po');
     };
 
-    // helper require function to import api services
-    global.requireApiServices = function (relativePath) {
-        return require(__dirname + '/../../api/services/' + relativePath + '.service');
-    };
-
-    // helper require function to import helpers
-    global.requireHelper = function (relativePath) {
-        return require(__dirname + '/../helpers/' + relativePath + '.js');
-    };
-
     global.using = require('jasmine-data-provider');
     
     global.allureCookies = require('allure-cookies');
@@ -52,30 +42,11 @@ module.exports = function () {
         displayPendingSummary: false
     }));
 
-    // write jUnit report
-    let jasmineReporters = require('jasmine-reporters');
-
-    browser.manage().window().setSize(1400, 900);
+    browser.manage().window().setSize(1300, 800);
     browser.manage().window().maximize();
-
-    // configure JUnit reporter
-    let getProcessedConfig = browser.getProcessedConfig().then(function (config) {
-        let reportPrefix = config.capabilities.name ? config.capabilities.name : "report";
-
-        let junitReporter = new jasmineReporters.JUnitXmlReporter({
-            consolidateAll: false,
-            savePath: 'test-results',
-            filePrefix: reportPrefix
-        });
-        jasmine.getEnv().addReporter(junitReporter);
-    });
 
     // Allure reporter added via allureCookies to more comfortable work with attachments, description, etc
     // eslint-disable-next-line no-undef
     jasmine.getEnv().addReporter(allureCookies.getJasmineAllureReporter(
         {basePath: './', resultsDir: 'allure-results'}));
-
-    return protractor.promise.all([
-        getProcessedConfig
-    ]);
 };

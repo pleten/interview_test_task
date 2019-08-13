@@ -21,7 +21,7 @@ describe("My profile page. Client area", function () {
         helpers.logOut();
     });
 
-    it("should show appropriate title, url when after opening the 'Profile' page", function () {
+    it("should show the 'My Profile | SSLs.com' title, url when after opening the 'Profile' page", function () {
         helpers.logIn(email, password);
         helpers.openProfilePage();
 

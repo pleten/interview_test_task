@@ -17,7 +17,7 @@ describe("My profile page. Refresh support pin", function () {
         helpers.logOut();
     });
 
-    it("should show appropriate title, url when after opening the 'Profile' page", function () {
+    it("should show the updated support pin after clicking the update button", function () {
         helpers.openProfilePage();
         supportPin = profilePage.supportPinValue.getText();
         profilePage.updateSupportPinIcon.click();

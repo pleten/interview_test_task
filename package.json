@@ -15,7 +15,6 @@
     "jasmine-core": "^2.9.1",
     "jasmine-data-provider": "^2.2.0",
     "jasmine-expect": "^2.0.2",
-    "jasmine-reporters": "^2.0.7",
     "jasmine-spec-reporter": "^2.4.0",
     "jsdoc": "^3.5.5",
     "name-that-color": "^0.1.0",
@@ -27,6 +26,6 @@
   "scripts": {
     "postinstall": "node node_modules/protractor/bin/webdriver-manager update",
     "testLocal": "./node_modules/protractor-flake/bin/protractor-flake --parser standard  --max-attempts=1 -- e2e/config/local.conf.js",
-    "testRemote": "./node_modules/protractor-flake/bin/protractor-flake --parser standard  --max-attempts=2 -- e2e/config/remote.conf.js"
+    "testRemote": "./node_modules/protractor-flake/bin/protractor-flake --parser standard  --max-attempts=1 -- e2e/config/remote.conf.js"
   }
 }
