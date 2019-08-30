@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  codecept:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: codeceptjs
+    network_mode: host
+    user: "pptruser"
+    volumes:
+    - ../:/tests
+    - /tests/node_modules/
