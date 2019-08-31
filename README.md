@@ -17,42 +17,40 @@
   `codecept.conf.js`
 - There is no linters =( 
    
-## E2e testing documentation page
-----
-### Preconditions
+## Preconditions
 ```
 Node v7.6.0 or greater.
 ````
-### Installation
+## Installation
 To install node dependencies
 ```
 npm install
 ```
 
-### Run tests
+## Run tests
 To run tests
 ```
     npx codeceptjs run 
 ```    
 
-### Tests report
+## Tests report
 To generate and open the tests report use the following command after the test run(-s):
     
 ```
-    $ node_modules/allure-commandline/bin/allure serve outpur/
+    $ node_modules/allure-commandline/bin/allure serve output/
+
 ```
 
-### Docker
-
-## Precondition
+## Docker
+### Precondition
 Docker engine 17.06.0+
 
-## Build the image and run container 
+### Build the image and run container 
 
 docker-compose -f docker-compose.test.yml build
 docker-compose -f docker-compose.test.yml up -d
 
-## Run tests
+### Run tests
 ```
 docker exec -it codeceptjs npx codeceptjs run
 ```
