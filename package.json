@@ -1,0 +1,32 @@
+{
+  "name": "interview-test-task-js",
+  "description": "E2E tests using CodeceptJs",
+  "license": "MIT",
+  "version": "1.0.0",
+  "scripts": {
+    "test:e2e:def": "TS_NODE_PROJECT='./e2e-ts-exmp/tsconfig.json' codeceptjs def && mv steps.d.ts ./e2e-ts-exmp/typings/",
+    "test:e2e": "TS_NODE_PROJECT='./e2e-ts-exmp/tsconfig.json' codeceptjs run e2e-ts-exmp/awesome-ts-test.ts",
+    "test:e2e:steps": "TS_NODE_PROJECT='./e2e-ts-exmp/tsconfig.json' codeceptjs e2e-ts-exmp/awesome-ts-test.ts --steps"
+  },
+  "bin": {
+    "codeceptjs": "codecept.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "@types/node": "^12.7.2"
+  },
+  "devDependencies": {
+    "codeceptjs": "2.3.0",
+    "puppeteer": "1.16.0",
+    "chai": "4.2.0",
+    "chai-arrays": "2.0.0",
+    "chai-sorted": "0.2.0",
+    "faker": "^4.1.0",
+    "ts-node": "8.3.0",
+    "typescript": "3.5.3",
+    "allure-commandline": "2.9.0"
+  }
+}
